@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./resultado-grafico1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="grafico.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap"
+    />
+  </head>
+  <body>
+    <section class="resultado-grafico">
+      <div class="title-parent">
+        <div class="title9"><div class="title10">Resultados</div></div>
+        <div class="indicator">
+          <div class="building-blocks" id="buildingBlocksContainer">
+            <div class="container3">
+              <div class="state-layer10">
+                <div class="label-text10">Emissão</div>
+              </div>
+            </div>
+          </div>
+          <div class="building-blocks1" id="buildingBlocksContainer1">
+            <div class="container4">
+              <div class="state-layer10">
+                <div class="label-text10">Árvores</div>
+              </div>
+            </div>
+          </div>
+          <div class="building-blocks2">
+            <div class="container5">
+              <div class="state-layer12">
+                <img
+                  class="iconscheck-24px"
+                  alt=""
+                  src="public/iconscheck-24px.svg"
+                />
+                <div class="label-text10">Gráfico</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="detalhes">
+        
+        <!-- GRAFICO -->
+        <canvas id="pie-chart"></canvas>
+
+        <div class="legenda">
+          <div class="energia3">
+            <div class="porcentagem">
+              <div class="porcentagem-child"></div>
+              <div class="div" id="energy">25%</div>
+            </div>
+            <div class="transporte-areo">Energia doméstica</div>
+          </div>
+          <div class="energia3">
+            <div class="porcentagem">
+              <div class="porcentagem-item"></div>
+              <div class="div" id="voos">25%</div>
+            </div>
+            <div class="transporte-areo">Transporte aéreo</div>
+          </div>
+          <div class="energia3">
+            <div class="porcentagem">
+              <div class="porcentagem-inner"></div>
+              <div class="div" id="transporte" > 25%</div>
+            </div>
+            <div class="transporte-areo">Transporte terrestre</div>
+          </div>
+          <div class="energia3">
+            <div class="porcentagem">
+              <div class="rectangle-div"></div>
+              <div class="div" id="comida">25%</div>
+            </div>
+            <div class="transporte-areo">Alimentação</div>
+          </div>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <button class="button10" id="button">
+          <div class="state-layer13">
+            <div class="label-text13">CALCULAR NOVAMENTE</div>
+          </div>
+        </button>
+      </div>
+      <div class="navigation-bar">
+        <button class="building-blocks-segment" id="buildingBlocksSegment">
+          <div class="icon-container">
+            <div class="state-layer14">
+              <img class="icon" alt="" src="public/navigation/home.svg" />
+            </div>
+          </div></button
+        ><button class="building-blocks-segment">
+          <div class="icon-container1">
+            <div class="state-layer14">
+              <img class="icon" alt="" src="public/navigation/calculadora-ativo.svg" />
+            </div>
+          </div></button
+        ><button class="building-blocks-segment" id="buildingBlocksSegment2">
+          <div class="icon-container">
+            <div class="state-layer14">
+              <img class="icon" alt="" src="public/navigation/opcoes.svg" />
+            </div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <script>
+      var buildingBlocksContainer = document.getElementById(
+        "buildingBlocksContainer"
+      );
+      if (buildingBlocksContainer) {
+        buildingBlocksContainer.addEventListener("click", function (e) {
+          window.location.href = "./resultado-emissao.html";
+        });
+      }
+      
+      var buildingBlocksContainer1 = document.getElementById(
+        "buildingBlocksContainer1"
+      );
+      if (buildingBlocksContainer1) {
+        buildingBlocksContainer1.addEventListener("click", function (e) {
+          window.location.href = "./resultado-arvore.html";
+        });
+      }
+      
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "./home-calculo.html";
+        });
+      }
+      
+      var buildingBlocksSegment = document.getElementById("buildingBlocksSegment");
+      if (buildingBlocksSegment) {
+        buildingBlocksSegment.addEventListener("click", function (e) {
+          window.location.href = "./home-bem.html";
+        });
+      }
+      
+      var buildingBlocksSegment2 = document.getElementById("buildingBlocksSegment2");
+      if (buildingBlocksSegment2) {
+        buildingBlocksSegment2.addEventListener("click", function (e) {
+          window.location.href = "./home-opcoes.html";
+        });
+      }
+      </script>
+  </body>
+</html>

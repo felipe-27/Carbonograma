@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./calculo1.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- fontes -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+  <style>
+    .swal-title {
+      padding: 20px 24px;
+      font-size: 24px;
+      font-family: "Rubik";
+    }
+    .swal-text {
+      font-size: 20px;
+      padding: 0px 24px 10px;
+      font-family: "Source Sans Pro";
+    }
+    .swal-button--confirm,
+    .swal-button--cancel {
+      padding: 10px 24px;
+      font-size: 15px;
+      font-family: "Source Sans Pro";
+    }
+    .alinhar {
+      padding: 64px 24px 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="calculo alinhar">
+    <header class="title40">
+      <div class="title41">Opps!!!!</div>
+    </header>
+    <div class="content7">
+      <label class="body5">Tem algo errado! Está faltando alguma coisa........</label><label class="body5">Por favor
+        cheque novamente as informações fornecidas. Certifique-se que colocou tudo certo</label><label
+        class="body5">Lembre-se: Caso seja perguntado sobre algum produto ou serviço que você não
+        tenha utilizado, preencha as lacunas com o número 0.</label>
+    </div>
+    <div class="actions11">
+      <button class="button26" id="Começar calculo">
+        <div class="state-layer44">
+          <div class="label-text35">Recalcular</div>
+        </div>
+      </button><button class="button27" id="button1">
+        <div class="state-layer44">
+          <div class="label-text36">Sair</div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <script>
+    var button = document.getElementById("Começar calculo");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        window.location.href = "./alimentacao.html";
+      });
+    }
+
+    var button1 = document.getElementById("button1");
+    if (button1) {
+      button1.addEventListener("click", function (e) {
+        swal({
+            title: "Deseja sair?",
+            text: "Ao fechar o formulário, os campos preenchidos NÃO serão salvos!",
+            buttons: ["Cancelar", "Sair"],
+            dangerMode: true,
+            closeOnClickOutside: false,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              window.location.href = "./home-calculo.html"
+            }
+          });
+      });
+    }
+  </script>
+</body>
+
+</html>

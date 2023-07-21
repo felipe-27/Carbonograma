@@ -1,0 +1,349 @@
+/* Ajuste de altura */
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+}
+/* section de conteudo, dentro do html e body */
+.resultado-grafico {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+.title10,
+.title9 {
+  align-self: stretch;
+}
+.title10 {
+  position: relative;
+  font-weight: 100;
+  color: #fffbff;
+  mix-blend-mode: normal;
+}
+.title9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.label-text10 {
+  position: relative;
+  letter-spacing: 0.5px;
+}
+.container3,
+.state-layer10 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.state-layer10 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 10px 12px;
+}
+.container3 {
+  border-radius: 100px 0 0 100px;
+  background-color: #279d3e;
+  border: 1px solid rgba(32, 27, 23, 0.6);
+  box-sizing: border-box;
+  height: 40px;
+  overflow: hidden;
+  flex-direction: column;
+}
+.building-blocks {
+  flex-direction: row;
+  padding: 4px 0;
+  cursor: pointer;
+}
+.building-blocks,
+.building-blocks1,
+.container4 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container4 {
+  background-color: #279d3e;
+  border: 1px solid rgba(32, 27, 23, 0.6);
+  box-sizing: border-box;
+  height: 40px;
+  overflow: hidden;
+  flex-direction: column;
+}
+.building-blocks1 {
+  flex-direction: row;
+  padding: 4px 0;
+  cursor: pointer;
+  margin-left: -1px;
+}
+.iconscheck-24px {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: none;
+}
+.state-layer12 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 10px 12px;
+  gap: 4px;
+}
+.building-blocks2,
+.container5,
+.state-layer12 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container5 {
+  border-radius: 0 100px 100px 0;
+  background-color: #f9cb40;
+  border: 1px solid rgba(32, 27, 23, 0.6);
+  box-sizing: border-box;
+  height: 40px;
+  overflow: hidden;
+  flex-direction: column;
+}
+.building-blocks2 {
+  flex-direction: row;
+  padding: 4px 0;
+  margin-left: -1px;
+  color: #513720;
+}
+.indicator,
+.title-parent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.indicator {
+  flex-direction: row;
+  padding: 10px;
+  filter: drop-shadow(0 4px 8px #00000025);
+  font-size: 16px;
+  font-family: "Source Sans Pro";
+}
+.title-parent {
+  flex-direction: column;
+  gap: 16px;
+}
+.grafico-icon {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  flex-shrink: 0;
+  mix-blend-mode: normal;
+}
+.porcentagem-child {
+  position: relative;
+  border-radius: 12px;
+  background-color: #ebe07c;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.div {
+  position: absolute;
+  margin: 0 !important;
+  top: 16px;
+  left: 10px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 1;
+}
+.energia3,
+.porcentagem {
+  display: flex;
+  flex-direction: row;
+}
+.porcentagem {
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.energia3 {
+  align-self: stretch;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.porcentagem-item {
+  position: relative;
+  border-radius: 12px;
+  background-color: #60a9ff;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.transporte-areo {
+  flex: 1;
+  position: relative;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  font-family: "Source Sans Pro";
+  color: #fff;
+}
+.porcentagem-inner,
+.rectangle-div {
+  position: relative;
+  border-radius: 12px;
+  background-color: #b27f47;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.rectangle-div {
+  background-color: #88c340;
+}
+.detalhes,
+.legenda {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.legenda {
+  padding: 0 8px;
+  justify-content: center;
+  gap: 8px;
+}
+.detalhes {
+  justify-content: flex-start;
+  gap: 32px;
+  font-size: 16px;
+  color: #201b17;
+}
+.label-text13 {
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Rubik;
+  color: #513720;
+  text-align: center;
+}
+.state-layer13 {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 24px;
+  align-items: center;
+  justify-content: center;
+}
+.button-wrapper,
+.button10 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+.button10 {
+  cursor: pointer;
+  border: 0;
+  padding: 8px 24px;
+  background-color: #f9cb40;
+  border-radius: 100px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.button-wrapper {
+  padding: 0 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.state-layer14 {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: center;
+}
+.icon-container {
+  border-radius: 22px;
+  overflow: hidden;
+}
+.building-blocks-segment,
+.icon-container,
+.icon-container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.building-blocks-segment {
+  cursor: pointer;
+  border: 0;
+  padding: 21px 0;
+  background-color: transparent;
+  align-self: stretch;
+  flex: 1;
+}
+.icon-container1 {
+  border-radius: 22px;
+  background-color: #f9cb40;
+  overflow: hidden;
+}
+.navigation-bar {
+  align-self: stretch;
+  border-radius: 71px;
+  background-color: #176727;
+  box-shadow: 4px 8px 20px -5px rgba(0, 0, 0, 0.2);
+  height: 90px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0 8px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.resultado-grafico {
+  position: relative;
+  background: linear-gradient(168.55deg, #279d3e, #176727);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  gap: 42px;
+  text-align: center;
+  font-size: 32px;
+  color: #fffbff;
+  font-family: Rubik;
+}
+
+#myChart {
+  width:100%;
+  height:100%;
+  min-height:250px;
+}
+.zc-ref {
+  display: none;
+}

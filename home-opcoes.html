@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./home-opcoes1.css" />
+  <!-- script Tradução -->
+  <script src="traducao.js" defer></script>
+  <script src="transições.JS" defer></script>
+  <!-- Fontes -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+  <section class="home-opcoes">
+    <div class="title49" name="identificar" data-key="title">Opções</div>
+
+    <div class="espacamento">
+      <div class="subtitulo" name="identificar" data-key="subtitle">Sobre o aplicativo</div>
+
+      <div class="copyright">
+        <label class="body16" name="identificar" data-key="aplicativo">
+          <span class="aplicarbono"> Carbonograma</span>
+          <span style="font-size: 16px;"> versão 3 (beta)</span>
+        </label>
+
+        <label class="body17" name="identificar" data-key="copyright">
+          <span>Copyright </span>
+          <span class="span">©</span>
+          <span> Centro Educacional da Fundação Salvador Arena</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="espacamento">
+      <div class="subtitulo" name="identificar" data-key="selecione"> Selecione um idioma </div>
+      <div class="bandeiras">
+        <div id="pt" class="espacamento">
+          <img src="public/home/brasil.png"> </img>
+          <label>PT-BR</label>
+        </div>
+        <div id="en" class="espacamento">
+          <img src="public/home/eua.png"> </img>
+          <label>EN-US</label>
+        </div>
+      </div>
+    </div>
+    <div class="navigation-bar5">
+      <div class="building-blocks-segment15" id="home">
+        <div class="icon-container15">
+          <div class="state-layer53">
+            <img class="home-icon2" alt="" src="public/navigation/home.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="building-blocks-segment15" id="calculo">
+        <div class="icon-container15">
+          <div class="state-layer53">
+            <img class="home-icon2" alt="" src="public/navigation/calculadora.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="building-blocks-segment17">
+        <div class="icon-container17">
+          <div class="state-layer53">
+            <img class="home-icon2" alt="" src="public/navigation/opcoes-ativo.svg" />
+            <div class="slide active"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const currentPage = "homeOptions";
+
+    document.addEventListener('DOMContentLoaded', function (e) {
+      document.body.classList.add('fade-in')
+
+      traduzir();
+
+      var buttons = [
+        {id: 'home', redirect: './home-bem.html'},
+        {id: 'calculo', redirect: './home-calculo.html'}
+      ];
+
+      //fade out
+      buttons.forEach(function (button) {
+        var element = document.getElementById(button.id);
+        element.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          document.body.style.opacity = '0';
+
+          setTimeout(function () {
+            window.location.href = button.redirect;
+          }, 250);
+
+        });
+      });
+    });
+
+    //Seleção de idiomas
+    var translation = [
+      {id: 'pt', language: 'pt'},
+      {id: 'en', language: 'en' }
+    ];
+    
+    translation.forEach(function (button) {
+      var element = document.getElementById(button.id);
+      if (element) {
+        element.addEventListener('click', function (event) {
+          event.preventDefault();
+          localStorage.setItem('language', button.language);
+          traduzir();
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

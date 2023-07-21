@@ -1,0 +1,179 @@
+/* Ajuste de altura */
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+}
+/* section de conteudo, dentro do html e body */
+.sobre-equipe {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+.vector-icon1 {
+  position: absolute;
+  height: 65.38%;
+  width: 90.38%;
+  top: 17.31%;
+  right: 5.77%;
+  bottom: 17.31%;
+  left: 3.85%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.icon10,
+.sobre-nos2 {
+  position: absolute;
+  top: 0;
+}
+.icon10 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  left: 0;
+  width: 32px;
+  height: 32px;
+}
+.sobre-nos2 {
+  left: calc(50% - 122px);
+  line-height: 32px;
+  font-weight: 500;
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 244px;
+  mix-blend-mode: normal;
+}
+.title16 {
+  align-self: stretch;
+  position: relative;
+  height: 32px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 24px;
+  font-family: Rubik;
+}
+.title18 {
+  flex: 1;
+  position: relative;
+  font-weight: 600;
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: normal;
+}
+.title17 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 32px;
+  font-family: Rubik;
+}
+.somos-um-time {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.criar-um-aplicativo {
+  margin: 0;
+}
+.somos-um-time-container {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+.marcel-icon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: 50px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.foto {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.felipe-stefanes,
+.gestor-dos-clculos {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+.felipe-stefanes {
+  font-size: 24px;
+  font-weight: 600;
+}
+.textos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.pessoa {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.content5,
+.integrantes,
+.sobre-equipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.integrantes {
+  align-self: stretch;
+  justify-content: center;
+  gap: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+.content5,
+.sobre-equipe {
+  justify-content: flex-start;
+  gap: 36px;
+}
+.content5 {
+  align-self: stretch;
+  padding: 0 16px;
+}
+.sobre-equipe {
+  position: relative;
+  background: linear-gradient(168.55deg, #279d3e, #176727);
+  width: 100%;
+  padding: 32px 26px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 22px;
+  color: #fffbff;
+  font-family: "Source Sans Pro";
+}

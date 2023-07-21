@@ -1,0 +1,150 @@
+/* Ajuste de altura */
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+}
+/* section de conteudo, dentro do html e body */
+.bem3 {
+  min-height: 100%;
+}
+
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+.title25,
+.title27 {
+  position: relative;
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: normal;
+}
+.title25 {
+  align-self: stretch;
+  line-height: 32px;
+  font-weight: 500;
+}
+.title27 {
+  flex: 1;
+  font-weight: 600;
+}
+.title26 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 32px;
+  font-family: Rubik;
+}
+.em-seguida-precisamos {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+.somos6,
+.texto5 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.texto5 {
+  flex: 1;
+  flex-direction: column;
+  padding: 0 16px;
+  justify-content: flex-start;
+  gap: 36px;
+  text-align: left;
+  font-size: 22px;
+  font-family: "Source Sans Pro";
+}
+.label-text27 {
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Rubik;
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.button18,
+.state-layer36 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.state-layer36 {
+  flex-direction: row;
+  padding: 10px 12px;
+}
+.button18 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 8px;
+  flex-direction: column;
+}
+.dot13,
+.dot15 {
+  position: relative;
+  border-radius: 24px;
+  height: 8px;
+  flex-shrink: 0;
+}
+.dot13 {
+  background-color: #201b17;
+  width: 8px;
+  opacity: 0.3;
+}
+.dot15 {
+  background-color: #f9cb40;
+  width: 12px;
+}
+.pagination-dots3 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+}
+.actions7,
+.bem3,
+.pagination-dots3 {
+  display: flex;
+  align-items: center;
+}
+.actions7 {
+  align-self: stretch;
+  overflow: hidden;
+  flex-direction: row;
+  padding: 16px 6px;
+  justify-content: space-between;
+}
+.bem3 {
+  position: relative;
+  background: linear-gradient(168.55deg, #279d3e, #176727);
+  width: 100%;
+  flex-direction: column;
+  padding: 32px 26px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  gap: 36px;
+  text-align: center;
+  font-size: 24px;
+  color: #fffbff;
+  font-family: Rubik;
+}

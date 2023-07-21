@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./transporte-aereo.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="script-valores.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+  <section class="transporte-aereo">
+    <header class="exit">
+      <button class="close" id="close">
+        <img class="close-child" alt="" src="public/navigation/exit-button.svg" />
+      </button>
+    </header>
+
+    <div class="progress-bar">
+      <div class="voos">
+        <div class="dots">
+          <img class="fundo-icon" alt="" src="public/calculo/progress-bar/circle-done.svg" />
+          <img class="food-icon" alt="" src="public/calculo/progress-bar/food.svg" />
+        </div>
+        <div class="progresso">
+          <div class="linha"></div>
+        </div>
+        <div class="dots">
+          <img class="fundo-icon" alt="" src="public/calculo/progress-bar/circle-done.svg" />
+          <img class="food-icon" alt="" src="public/calculo/progress-bar/bus.svg" />
+        </div>
+        <div class="progresso">
+          <div class="linha"></div>
+        </div>
+        <div class="dots2">
+          <img class="fundo-icon2" alt="" src="public/calculo/progress-bar/circle-active.svg " />
+          <img class="avio-icon" alt="" src="public/calculo/progress-bar/aviao-ativo.svg" />
+          <div class="alimentao">Voos</div>
+        </div>
+        <div class="progresso">
+          <div class="linha"></div>
+        </div>
+        <div class="dots3">
+          <img class="fundo-icon3" alt="" src="public/calculo/progress-bar/circle-inactive.svg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="viagem" name="formVoos" id="formVoos">
+        <div class="por-quantas-horas">
+          Por quantas horas você viajou de avião no último ano?
+        </div>
+        <input name="horasAviao" class="caixa-de-texto" type="number" placeholder="Horas" id="horasAviao"
+          oninput="chamarVoos()" />
+      </div>
+      <div class="viagem">
+        <div class="qual-a-quantidade-de-passageir-parent">
+          <div class="por-quantas-horas">
+            Qual a quantidade de passageiros, em média, de cada voo?
+          </div>
+          <div class="caso-no-saiba">*Caso não saiba, use 300</div>
+        </div>
+        <input name="qntdPessoas" class="caixa-de-texto" type="number" placeholder="Quantidade" id="qntdPessoas"
+          oninput="chamarVoos()" />
+      </div>
+    </div>
+
+    <div class="actions1">
+      <div class="button2" id="buttonContainer">
+        <div class="state-layer2">
+          <div class="label-text2">Anterior</div>
+        </div>
+      </div>
+      <button type=submit class="button3" id="button">
+        <div class="state-layer2">
+          <div class="label-text3">Próximo</div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <script>
+    var close = document.getElementById("close");
+    if (close) {
+      close.addEventListener("click", function (e) {
+        closeAlert();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById("horasAviao").value = localStorage.getItem("horasAviao");
+      document.getElementById("qntdPessoas").value = localStorage.getItem("qntdPessoas");
+    });
+
+    var buttonContainer = document.getElementById("buttonContainer");
+    if (buttonContainer) {
+      buttonContainer.addEventListener("click", function (e) {
+        window.location.href = "./transporte-terrestre.html";
+      });
+    }
+
+    var button = document.getElementById("button");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "./energia.html";
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./resultado-arvore1.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap"
+    />
+  </head>
+  <body>
+    <section class="resultado-arvore">
+      <div class="title-group">
+        <div class="title11"><div class="title12">Resultados</div></div>
+        <div class="indicator1">
+          <div class="building-blocks3" id="buildingBlocksContainer">
+            <div class="container6">
+              <div class="state-layer17">
+                <div class="label-text14">Emissão</div>
+              </div>
+            </div>
+          </div>
+          <div class="building-blocks4">
+            <div class="container7">
+              <div class="state-layer18">
+                <img
+                  class="iconscheck-24px1"
+                  alt=""
+                  src="public/iconscheck-24px1.svg"
+                />
+                <div class="label-text14">Árvores</div>
+              </div>
+            </div>
+          </div>
+          <div class="building-blocks5" id="buildingBlocksContainer2">
+            <div class="container8">
+              <div class="state-layer17">
+                <div class="label-text14">Gráfico</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arvores">
+        <div class="descricao6">Árvores necessárias para compensação:</div>
+        <div class="ilustracao2">
+          <img class="folha-icon" alt="" src="public/calculo/resultado/folha.svg" />
+          <div class="valor" id="tree">9999</div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="button11" id="button">
+          <div class="state-layer20">
+            <div class="label-text17">CALCULAR NOVAMENTE</div>
+          </div>
+        </button>
+      </div>
+      <div class="navigation-bar1">
+        <button class="building-blocks-segment3" id="buildingBlocksSegment">
+          <div class="icon-container3">
+            <div class="state-layer21">
+              <img class="icon3" alt="" src="public/navigation/home.svg" />
+            </div>
+          </div></button
+        ><button class="building-blocks-segment3">
+          <div class="icon-container4">
+            <div class="state-layer21">
+              <img class="icon3" alt="" src="public/navigation/calculadora-ativo.svg" />
+            </div>
+          </div></button
+        ><button class="building-blocks-segment3" id="buildingBlocksSegment2">
+          <div class="icon-container3">
+            <div class="state-layer21">
+              <img class="icon3" alt="" src="public/navigation/opcoes.svg" />
+            </div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <script>
+      var arvore = localStorage.getItem('arvores')
+      document.getElementById("tree").innerHTML = arvore
+
+      var buildingBlocksContainer = document.getElementById(
+        "buildingBlocksContainer"
+      );
+      if (buildingBlocksContainer) {
+        buildingBlocksContainer.addEventListener("click", function (e) {
+          window.location.href = "./resultado-emissao.html";
+        });
+      }
+      
+      var buildingBlocksContainer2 = document.getElementById(
+        "buildingBlocksContainer2"
+      );
+      if (buildingBlocksContainer2) {
+        buildingBlocksContainer2.addEventListener("click", function (e) {
+          window.location.href = "./resultado-grafico.html";
+        });
+      }
+      
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "./home-calculo.html";
+        });
+      }
+      
+      var buildingBlocksSegment = document.getElementById("buildingBlocksSegment");
+      if (buildingBlocksSegment) {
+        buildingBlocksSegment.addEventListener("click", function (e) {
+          window.location.href = "./home-bem.html";
+        });
+      }
+      
+      var buildingBlocksSegment2 = document.getElementById("buildingBlocksSegment2");
+      if (buildingBlocksSegment2) {
+        buildingBlocksSegment2.addEventListener("click", function (e) {
+          window.location.href = "./home-opcoes.html";
+        });
+      }
+      </script>
+  </body>
+</html>

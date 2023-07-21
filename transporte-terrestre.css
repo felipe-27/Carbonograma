@@ -1,0 +1,347 @@
+/* Ajuste de altura */
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+}
+
+/* section de conteudo, dentro do html e body */
+.transporte-terrestre {
+  min-height: 100%;
+}
+
+::placeholder{
+  color: white;
+  opacity: 0.5;
+}
+
+/* Pop-ups*/
+.swal-title{
+  padding: 20px 24px;
+  font-size: 24px;
+  font-family: "Rubik";
+}
+.swal-text{
+  font-size: 20px;
+  padding: 0px 24px 10px;
+  font-family: "Source Sans Pro";
+}
+.swal-button--confirm, .swal-button--cancel {
+  padding: 10px 24px;
+  font-size: 15px;
+  font-family: "Source Sans Pro";
+}
+
+.select-placeholder{
+  background-color: #2fbb4b;
+
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+.group-icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.close3 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.exit3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.food-icon2 {
+  flex-shrink: 0;
+}
+.fundo-icon12 {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.food-icon2 {
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 8.4px);
+  left: calc(50% - 8.4px);
+  width: 17.16px;
+  height: 17.16px;
+  overflow: hidden;
+  z-index: 1;
+}
+.dots12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.linha18 {
+  align-self: stretch;
+  flex: 1;
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  overflow: hidden;
+}
+.progresso9 {
+  flex: 1;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.fundo-icon13 {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.alimentao3,
+.onibus-icon {
+  position: absolute;
+  margin: 0 !important;
+}
+.onibus-icon {
+  top: calc(50% - 10.86px);
+  left: calc(50% - 10.86px);
+  width: 21.84px;
+  height: 21.84px;
+  flex-shrink: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.alimentao3 {
+  top: 42px;
+  left: calc(50% - 39px);
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+.dots13 {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.fundo-icon14 {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+.fundo-icon14 {
+  position: relative;
+  z-index: 0;
+}
+
+.dots14,
+.transporte {
+  display: flex;
+  flex-direction: row;
+}
+.dots14 {
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 10px;
+}
+.transporte {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 37px);
+  right: 0;
+  left: 0;
+  height: 42px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+.progress-bar3,
+.title6 {
+  align-self: stretch;
+  position: relative;
+}
+.progress-bar3 {
+  height: 74px;
+  flex-shrink: 0;
+}
+.title6 {
+  line-height: 32px;
+  font-weight: 500;
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 8px 20px -5px rgba(0, 0, 0, 0.2);
+  mix-blend-mode: normal;
+}
+.caixa-de-texto6 {
+  appearance: none;
+  display: flex;
+  border-radius: 20px;
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: #279d3e;
+  box-shadow: 4px 8px 20px -5px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  padding: 16px 32px;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.95;
+  color: #fffbff;
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+}
+
+.caixa-de-texto9,
+.content3,
+.veculo {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.veculo {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.caixa-de-texto9,
+.content3 {
+  align-items: center;
+}
+.caixa-de-texto9 {
+  border: 0;
+  font-family: "Source Sans Pro";
+  font-size: 20px;
+  color: white;
+  background-color: #279d3e;
+  border-radius: 20px;
+  box-shadow: 4px 8px 20px -5px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  padding: 16px 32px;
+  opacity: 0.95;
+}
+.content3 {
+  flex-direction: column;
+  gap: 42px;
+  text-align: left;
+  font-size: 24px;
+  font-family: Rubik;
+  flex: 1;
+
+  
+}
+.label-text8 {
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Rubik;
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.state-layer8 {
+  flex-direction: row;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.actions4 {
+  display: flex;
+  align-items: center;
+}
+.button8,
+.state-layer8,
+.state-layer9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button8 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 8px;
+  flex-direction: column;
+}
+.actions4,
+.state-layer9 {
+  flex-direction: row;
+}
+.state-layer9 {
+  padding: 10px 12px;
+}
+.actions4 {
+  align-self: stretch;
+  overflow: hidden;
+  padding: 16px 6px;
+  justify-content: space-between;
+}
+.transporte-terrestre {
+  position: relative;
+  background: linear-gradient(168.55deg, #279d3e, #176727);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Source Sans Pro";
+}
+
+.erro{
+  position: absolute;
+  font-size: 18px;
+  color: #5C3411;
+  background-color: #f9cb40;
+  border-radius:6px;
+  border-width: 100px;
+  display:none; 
+}
+
+.content{
+  display: none;
+}

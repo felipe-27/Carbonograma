@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./energia2.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="script-valores.js" defer></script>
+  <!-- Fontes -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+  <section class="energia">
+    <header class="exit1">
+      <button class="close1" id="close">
+        <img class="close-item" alt="" src="public/navigation/exit-button.svg" />
+      </button>
+    </header>
+
+    <div class="progress-bar1">
+      <div class="energia1">
+        <div class="dots4">
+          <img class="fundo-icon4" alt="" src="public/calculo/progress-bar/circle-done.svg" /> 
+          <img class="airplane2-icon" alt="" src="public/calculo/progress-bar/food.svg" />
+        </div>
+        <div class="progresso3">
+          <div class="linha3"></div>
+        </div>
+        <div class="dots4">
+          <img class="fundo-icon4" alt="" src="public/calculo/progress-bar/circle-done.svg" />
+          <img class="airplane2-icon" alt="" src="public/calculo/progress-bar/bus.svg" />
+        </div>
+        <div class="progresso3">
+          <div class="linha3"></div>
+        </div>
+        <div class="dots4">
+          <img class="fundo-icon4" alt="" src="public/calculo/progress-bar/circle-done.svg" />
+          <img class="airplane2-icon" alt="" src="public/calculo/progress-bar/aviao.svg" />
+        </div>
+        <div class="progresso3">
+          <div class="linha3"></div>
+        </div>
+        <div class="dots7">
+          <img class="fundo-icon7" alt="" src="public/calculo/progress-bar/circle-active.svg " />
+          <img class="energia-icon" alt="" src="public/calculo/progress-bar/energia-ativo.svg" />
+          <div class="alimentao1">Energia</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forms -->
+    <div class="content1">
+      <div class="diga-a-quantidade">
+        Diga a quantidade por mês que você usa de:
+      </div>
+      <div class="quantidade-mensal-de">
+        <div class="energia-domstica">
+          <div class="head">
+            <div class="energia-eltrica">Energia elétrica</div>
+            <img class="eletrica-icon" alt="" src="public/calculo/energia/eletrica.svg" />
+          </div>
+          <div class="linha6">
+            <div class="linha-child"></div>
+          </div>
+          <div class="box-texto">
+            <div class="container">
+              <input class="caixa-de-texto2" type="number" placeholder="Quantidade" id="eletrica"
+                onkeyup="chamarEnergia()" />
+            </div>
+            <div class="energia-eltrica">kW/h</div>
+          </div>
+        </div>
+
+        <div class="energia-domstica">
+          <div class="head">
+            <div class="energia-eltrica">Gás natural</div>
+            <img class="gas-natural-icon" alt="" src="public/calculo/energia/gas-natural.svg" />
+          </div>
+          <div class="linha6">
+            <div class="linha-child"></div>
+          </div>
+          <div class="box-texto">
+            <div class="container">
+              <input class="caixa-de-texto2" type="number" placeholder="Quantidade" id="natural"
+                onkeyup="chamarEnergia()" />
+            </div>
+            <div class="energia-eltrica">m³</div>
+          </div>
+        </div>
+
+        <div class="energia-domstica">
+          <div class="head">
+            <div class="energia-eltrica">Botijão de gás (GLP)</div>
+            <img class="gas-natural-icon" alt="" src="public/calculo/energia/glp.svg" />
+          </div>
+          <div class="linha6">
+            <div class="linha-child"></div>
+          </div>
+          <div class="box-texto">
+            <div class="container">
+              <input class="caixa-de-texto2" type="number" placeholder="Quantidade" id="botijao"
+                onkeyup="chamarEnergia()" />
+            </div>
+            <div class="energia-eltrica">botijões</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quantas-pessoas">
+        <div class="title5">
+          <div class="diga-a-quantidade">
+            Quantas pessoas moram na sua casa?
+          </div>
+          <div class="incluindo-voc">*Incluindo você</div>
+        </div>
+        <input class="caixa-de-texto5" type="number" placeholder="Quantidade" min="{1}" id="pessoasCasa"
+          onkeyup="chamarEnergia()" />
+      </div>
+    </div>
+
+    <!-- próx/anterior -->
+    <div class="actions2">
+      <div class="button4" id="buttonContainer">
+        <div class="state-layer4">
+          <div class="label-text4">Anterior</div>
+        </div>
+      </div>
+      <button class="button5" id="button">
+        <div class="state-layer4">
+          <div class="label-text5">Finalizar</div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <script>
+    var close = document.getElementById("close");
+    if (close) {
+      close.addEventListener("click", function (e) {
+        closeAlert();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById("eletrica").value = localStorage.getItem("eletrica");
+      document.getElementById("natural").value = localStorage.getItem("natural");
+      document.getElementById("botijao").value = localStorage.getItem("botijao");
+      document.getElementById("pessoasCasa").value = localStorage.getItem("pessoasCasa");
+    });
+
+    var buttonContainer = document.getElementById("buttonContainer");
+    if (buttonContainer) {
+      buttonContainer.addEventListener("click", function (e) {
+        window.location.href = "./transporte-aereo.html";
+      });
+    }
+
+    var button = document.getElementById("button");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        window.location.href = "./calculandoLoading.html";
+      });
+    }
+  </script>
+</body>
+
+</html>

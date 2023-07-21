@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./sobre-equipe.css" />
+  <script src="traducao.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+  <section class="sobre-equipe">
+    <header class="title16">
+      <button class="icon10" id="icon">
+        <img class="vector-icon1" alt="" src="public/navigation/seta-left.svg" />
+      </button>
+      <div class="sobre-nos2" name="identificar" data-key="titulo4">Sobre nós</div>
+    </header>
+
+    <div class="content5">
+
+      <header class="title17">
+        <div class="title18" name="identificar" data-key="t34">Nossa equipe</div>
+      </header>
+
+      <div class="pessoa">
+        <div class="somos-um-time-container">
+          <p class="somos-um-time" name="identificar" data-key="t32">
+            Somos um time formado por sete jovens criativos e dedicados que
+            lutam pelo mesmo objetivo:
+          </p><br>
+          <p class="criar-um-aplicativo" name="identificar" data-key="t33">
+            Criar um aplicativo que mimetize o sistema da calculadora de
+            carbono desenvolvida anteriormente pelo nosso colégio, ao passo em
+            que, adicionemos à sua carcaça original melhorias de caráter
+            tecnológico e artístico congruentes com a época em que vivemos.
+          </p>
+        </div>        
+      </div>
+
+      <div class="integrantes">
+        <div class="pessoa">
+          <div class="foto">
+            <img class="marcel-icon" alt="" src="public/sobre-nos/marcel.png" />
+          </div>
+          <div class="textos">
+            <div class="gestor-dos-clculos">Diretor geral e programação</div>
+            <div class="felipe-stefanes">Marcel Angelo</div>
+          </div>
+        </div>
+        <div class="pessoa">
+          <div class="foto">
+            <img class="marcel-icon" alt="" src="public/sobre-nos/andre.png" />
+          </div>
+          <div class="textos">
+            <div class="gestor-dos-clculos"> Vice Diretor e programação</div>
+            <div class="felipe-stefanes">André Henrique</div>
+          </div>
+        </div>
+        <div class="pessoa">
+          <div class="foto">
+            <img class="marcel-icon" alt="" src="public/sobre-nos/stefanes.png" />
+          </div>
+          <div class="textos">
+            <div class="gestor-dos-clculos">Gestor dos cálculos</div>
+            <div class="felipe-stefanes">Felipe Stefanes</div>
+          </div>
+        </div>
+        <div class="pessoa">
+          <div class="foto">
+            <img class="marcel-icon" alt="" src="public/sobre-nos/bruno.png" />
+          </div>
+          <div class="textos">
+            <div class="gestor-dos-clculos">Equipe dos cálculos</div>
+            <div class="felipe-stefanes">Bruno Henrique</div>
+          </div>
+        </div>
+        <div class="pessoa">
+          <div class="foto">
+            <img class="marcel-icon" alt="" src="public/sobre-nos/bruno.png" />
+          </div>
+          <div class="textos">
+            <div class="gestor-dos-clculos">Equipe dos cálculos</div>
+            <div class="felipe-stefanes">Rafael Sousa</div>
+          </div>
+        </div>
+        <div class="pessoa">
+          <div class="foto">
+            <img class="marcel-icon" alt="" src="public/sobre-nos/gabriel.png" />
+          </div>
+          <div class="textos">
+            <div class="gestor-dos-clculos">Gestor dos textos e designer do mascote</div>
+            <div class="felipe-stefanes">Gabriel Santos</div>
+          </div>
+        </div>
+        <div class="pessoa">
+          <div class="foto">
+            <img class="marcel-icon" alt="" src="public/sobre-nos/nascimento.png" />
+          </div>
+          <div class="textos">
+            <div class="gestor-dos-clculos">Gestor do design e equipe da programação</div>
+            <div class="felipe-stefanes">Felipe Nascimento</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const currentPage = "equipe";
+
+    document.addEventListener("DOMContentLoaded", function () {
+      traduzir();
+    });
+    var icon = document.getElementById("icon");
+    if (icon) {
+      icon.addEventListener("click", function (e) {
+        window.location.href = "./sobre-nos.html";
+      });
+    }
+  </script>
+</body>
+
+</html>

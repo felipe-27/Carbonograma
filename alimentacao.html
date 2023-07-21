@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./alimentacao2.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="script-valores.js" defer></script>
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+
+  <section class="alimentacao">
+    <header class="exit2">
+      <button class="close2" id="close">
+        <img class="close-inner" alt="" src="public/navigation/exit-button.svg" />
+      </button>
+    </header>
+
+    <div class="progress-bar2">
+      <div class="alimentacao1">
+        <div class="dots8">
+          <img class="fundo-icon8" alt="" src="public/calculo/progress-bar/circle-active.svg" />
+          <img class="comida-icon" alt="" src="public/calculo/progress-bar/food-ativo.svg" />
+          <div class="alimentao2">Alimentação</div>
+        </div>
+        <div class="progresso6">
+          <div class="linha9"></div>
+        </div>
+        <div class="dots9">
+          <img class="fundo-icon9" alt="" src="public/calculo/progress-bar/circle-inactive.svg" />
+        </div>
+        <div class="progresso6">
+          <div class="linha9"></div>
+        </div>
+        <div class="dots9">
+          <img class="fundo-icon9" alt="" src="public/calculo/progress-bar/circle-inactive.svg" />
+        </div>
+        <div class="progresso6">
+          <div class="linha9"></div>
+        </div>
+        <div class="dots9">
+          <img class="fundo-icon9" alt="" src="public/calculo/progress-bar/circle-inactive.svg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Forms -->
+    <div class="content2">
+
+      <label class="body3">Durante a semana, com que frequência você consome:</label>
+
+      <div class="escolha-alimento">
+        <!-- Carne vermelha -->
+        <div class="head3">
+          <div class="carne-vermelha">Carne Vermelha</div>
+          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/carne-vermelha.svg" />
+        </div>
+
+        <div class="linha12">
+          <div class="line-div"></div>
+        </div>
+
+        <div class="forms">
+          <div class="descricao">
+            <div class="no-consumo">Não consumo</div>
+            <div class="no-consumo">Diariamente</div>
+          </div>
+          <div class="carnevermelha" id="carneVer" oninput="chamarAlimentos()">
+            <input id="b-11" type="radio" name="botoes" value="0" checked>
+            <label for="b-11"> </label>
+            <input id="b-12" type="radio" name="botoes" value="1">
+            <label for="b-12"> </label>
+            <input id="b-13" type="radio" name="botoes" value="3">
+            <label for="b-13"> </label>
+            <input id="b-14" type="radio" name="botoes" value="5">
+            <label for="b-14"> </label>
+            <input id="b-15" type="radio" name="botoes" value="7">
+            <label for="b-15"> </label>
+          </div>
+        </div>
+      </div>
+      <div class="escolha-alimento">
+        <!-- Carne de frango -->
+        <div class="head3">
+          <div class="carne-vermelha">Carne de Frango</div>
+          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/carne-de-frango.svg" />
+        </div>
+
+        <div class="linha12">
+          <div class="line-div"></div>
+        </div>
+
+        <div class="forms">
+          <div class="descricao">
+            <div class="no-consumo">Não consumo</div>
+            <div class="no-consumo">Diariamente</div>
+          </div>
+          <div class="frango" id="carneFra" oninput="chamarAlimentos()">
+            <aling-center id="center">
+              <input id="b-1" type="radio" name="botoes1" value="0" checked>
+              <label for="b-1"> </label>
+              <input id="b-2" type="radio" name="botoes1" value="1">
+              <label for="b-2"> </label>
+              <input id="b-3" type="radio" name="botoes1" value="3">
+              <label for="b-3"> </label>
+              <input id="b-4" type="radio" name="botoes1" value="5">
+              <label for="b-4"> </label>
+              <input id="b-5" type="radio" name="botoes1" value="7">
+              <label for="b-5"> </label>
+            </aling-center>
+          </div>
+        </div>
+      </div>
+      <div class="escolha-alimento">
+        <!-- Carne de porco -->
+        <div class="head3">
+          <div class="carne-vermelha">Carne de Porco</div>
+          <img class="carne-de-porco" alt="" src="public/calculo/alimentacao/carne-de-porco.svg" />
+        </div>
+
+        <div class="linha12">
+          <div class="line-div"></div>
+        </div>
+
+        <div class="forms">
+          <div class="descricao">
+            <div class="no-consumo">Não consumo</div>
+            <div class="no-consumo">Diariamente</div>
+          </div>
+
+          <div class="carnedeporco" id="carnePor" oninput="chamarAlimentos()">
+            <aling-center id="center">
+              <input id="b-6" type="radio" name="botoes2" value="0" checked>
+              <label for="b-6"> </label>
+              <input id="b-7" type="radio" name="botoes2" value="1">
+              <label for="b-7"> </label>
+              <input id="b-8" type="radio" name="botoes2" value="3">
+              <label for="b-8"> </label>
+              <input id="b-9" type="radio" name="botoes2" value="5">
+              <label for="b-9"> </label>
+              <input id="b-10" type="radio" name="botoes2" value="7">
+              <label for="b-10"> </label>
+            </aling-center>
+          </div>
+        </div>
+      </div>
+      <div class="escolha-alimento">
+        <!-- Leite -->
+
+        <div class="head3">
+          <div class="carne-vermelha">Leite</div>
+          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/leite.svg" />
+        </div>
+
+        <div class="linha12">
+          <div class="line-div"></div>
+        </div>
+
+        <div class="forms">
+          <div class="descricao">
+            <div class="no-consumo">Não consumo</div>
+            <div class="no-consumo">Diariamente</div>
+          </div>
+          <div class="leite" id="leite" oninput="chamarAlimentos()">
+            <aling-center>
+              <input id="b-16" type="radio" name="botoes3" value="0" checked>
+              <label for="b-16"> </label>
+              <input id="b-17" type="radio" name="botoes3" value="1">
+              <label for="b-17"> </label>
+              <input id="b-18" type="radio" name="botoes3" value="3">
+              <label for="b-18"> </label>
+              <input id="b-19" type="radio" name="botoes3" value="5">
+              <label for="b-19"> </label>
+              <input id="b-20" type="radio" name="botoes3" value="7">
+              <label for="b-20"> </label>
+            </aling-center>
+          </div>
+        </div>
+      </div>
+      <div class="escolha-alimento">
+        <!-- Ovo -->
+        <div class="head3">
+          <div class="carne-vermelha">Ovos</div>
+          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/ovo.svg" />
+        </div>
+
+        <div class="linha12">
+          <div class="line-div"></div>
+        </div>
+
+        <div class="forms">
+          <div class="descricao">
+            <div class="no-consumo">Não consumo</div>
+            <div class="no-consumo">Diariamente</div>
+          </div>
+          <div class="egg" id="ovo" oninput="chamarAlimentos()">
+            <aling-center>
+              <input id="a1" type="radio" name="botoes4" value="0" checked>
+              <label for="a1"> </label>
+              <input id="a2" type="radio" name="botoes4" value="1">
+              <label for="a2"> </label>
+              <input id="a3" type="radio" name="botoes4" value="3">
+              <label for="a3"> </label>
+              <input id="a4" type="radio" name="botoes4" value="5">
+              <label for="a4"> </label>
+              <input id="a5" type="radio" name="botoes4" value="7">
+              <label for="a5"> </label>
+            </aling-center>
+          </div>
+        </div>
+      </div>
+      <div class="escolha-alimento">
+        <!-- Queijo -->
+        <div class="head3">
+          <div class="carne-vermelha">Queijo</div>
+          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/queijo.svg" />
+        </div>
+
+        <div class="linha12">
+          <div class="line-div"></div>
+        </div>
+
+        <div class="forms">
+          <div class="descricao">
+            <div class="no-consumo">Não consumo</div>
+            <div class="no-consumo">Diariamente</div>
+          </div>
+
+          <br>
+          <div class="queijo" id="queijo" oninput="chamarAlimentos()">
+            <aling-center>
+              <input id="c1" type="radio" name="botoes5" value="0" checked>
+              <label for="c1"> </label>
+              <input id="c2" type="radio" name="botoes5" value="1">
+              <label for="c2"> </label>
+              <input id="c3" type="radio" name="botoes5" value="3">
+              <label for="c3"> </label>
+              <input id="c4" type="radio" name="botoes5" value="5">
+              <label for="c4"> </label>
+              <input id="c5" type="radio" name="botoes5" value="7">
+              <label for="c5"> </label>
+            </aling-center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions3">
+      <!-- proxima pagina -->
+      <button class="button6">
+        <div class="state-layer6">
+          <div class="label-text6">Próximo</div>
+        </div>
+      </button>
+
+      <button class="button6" id="button1" onchange="" toogle button()>
+        <div class="state-layer7">
+          <div class="label-text6">Próximo</div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <script>
+    var close = document.getElementById("close");
+    if (close) {
+      close.addEventListener("click", function (e) {
+        closeAlert();
+      });
+    }
+    /* retornar valores salvos no localStorage */
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var checkRadio = ['botoes', 'botoes1', 'botoes2', 'botoes3', 'botoes4', 'botoes5'];
+      var alimentosObjectsString = localStorage.getItem('alimentosObjects');
+
+      if (alimentosObjectsString) {
+
+        var alimentosObjects = JSON.parse(alimentosObjectsString);
+        console.log(alimentosObjects);
+
+        checkRadio.forEach(function (name, index) {
+          //repetir esse código para cada "checkRadio" (cada alimento)
+          var valorComparado = alimentosObjects[index];
+          var botoesRadio = document.getElementsByName(name);
+          console.log(valorComparado);
+
+          // Iterar sobre os botões de rádio
+          for (var i = 0; i < botoesRadio.length; i++) {
+            // Comparar o valor do botão de rádio com a variável
+            if (parseInt(botoesRadio[i].value) == valorComparado) {
+              // Definir o botão de rádio como selecionado
+              botoesRadio[i].checked = true;
+              break; // Encerrar o loop, pois o botão foi encontrado
+            }
+          }
+        });
+      }
+    });
+
+    var button1 = document.getElementById("button1");
+    if (button1) {
+      button1.addEventListener("click", function (e) {
+        window.location.href = "./transporte-terrestre.html";
+      });
+    }
+  </script>
+
+</body>
+
+</html>

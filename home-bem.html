@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./home-bem1.css" />
+  <!-- Fontes -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+  <script src="traducao.js" defer></script>
+</head>
+
+<body>
+  <section class="home-bem">
+    <header class="title72">
+      <div class="title73" name="identificar" data-key="titulo">Boas vindas!</div>
+    </header>
+    <div class="content11">
+      <div class="carrossel2">
+        <div class="basic-dialog4">
+          <div class="text-content6">
+            <div class="title-description6">
+              <img class="title-description-inner" alt="" src="public/home/sobre-nos.png" />
+              <h1 class="title74" name="identificar" data-key="t1">Sobre nós</h1>
+              <label class="body30" name="identificar" data-key="t2">Acesse um resumo sobre os desenvolvedores e a sua instituição
+                de ensino</label>
+            </div>
+          </div>
+          <div class="actions20">
+            <div class="button40" id="buttonContainer1">
+              <div class="state-layer72">
+                <div class="label-text38" name="identificar" data-key="t3">CONFIRA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="basic-dialog4">
+          <div class="text-content6">
+            <div class="title-description6">
+              <img class="foto-como-fazer-o-bem" alt="" src="public/home/como-fazer-bem.png" />
+              <h1 class="title74"name="identificar" data-key="t4">Como fazer o bem</h1>
+              <label class="body30" name="identificar" data-key="t5">Ainda tem dúvidas sobre como plantar uma árvore? Confira
+                agora mesmo um pequeno manual</label>
+            </div>
+          </div>
+          <div class="actions20">
+            <div class="button40" id="bem">
+              <div class="state-layer72">
+                <div class="label-text38" name="identificar" data-key="t3">CONFIRA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="basic-dialog4">
+          <div class="text-content5">
+            <div class="title-description6">
+              <img class="title-description-child" alt="" src="public/home/mostre-sua-acao.png" />
+              <h1 class="title74"name="identificar" data-key="t7">Mostre sua ação</h1>
+              <label class="body30"name="identificar" data-key="t8">Temos uma ótima alternativa para você que acabou de plantar
+                sua primeira muda!</label>
+            </div>
+          </div>
+          <div class="actions20">
+            <div class="button39" id = "mostreAcao">
+              <div class="state-layer72">
+                <div class="label-text48"name="identificar" data-key="t3">CONFIRA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation-bar8">
+      <div class="building-blocks-segment24">
+        <div class="icon-container24">
+          <div class="state-layer75">
+            <img class="calculadore-icon" alt="" src="public/navigation/home-ativo.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="building-blocks-segment25" id="buildingBlocksSegment1">
+        <div class="icon-container25">
+          <div class="state-layer75">
+            <img class="calculadore-icon" alt="" src="public/navigation/calculadora.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="building-blocks-segment25" id="buildingBlocksSegment2">
+        <div class="icon-container25">
+          <div class="state-layer75">
+            <img class="calculadore-icon" alt="" src="public/navigation/opcoes.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const currentPage = "homeBem";
+    document.addEventListener("DOMContentLoaded", function () {
+      traduzir();
+    });
+
+
+    var buttonContainer1 = document.getElementById("buttonContainer1");
+    if (buttonContainer1) {
+      buttonContainer1.addEventListener("click", function (e) {
+        event.preventDefault();
+        document.body.classList.add('fade');
+          setTimeout(function () {
+        window.location.href = "./sobre-nos.html";
+      });
+      });
+    }
+
+    var buttonContainer1 = document.getElementById("mostreAcao");
+    if (buttonContainer1) {
+      buttonContainer1.addEventListener("click", function (e) {
+        window.location.href = "./mostre-sua-ao.html";
+      });
+    }    
+
+    var leftIcon = document.getElementById("bem");
+    if (leftIcon) {
+      leftIcon.addEventListener("click", function (e) {
+        window.location.href = "./bem.html";
+      });
+    }
+
+    var rightIcon = document.getElementById("rightIcon");
+    if (rightIcon) {
+      rightIcon.addEventListener("click", function (e) {
+        window.location.href = "./home-acao.html";
+      });
+    }
+
+    var buildingBlocksSegment1 = document.getElementById("buildingBlocksSegment1");
+    if (buildingBlocksSegment1) {
+      buildingBlocksSegment1.addEventListener("click", function (e) {
+        window.location.href = "./home-calculo.html";
+      });
+    }
+
+    var buildingBlocksSegment2 = document.getElementById("buildingBlocksSegment2");
+    if (buildingBlocksSegment2) {
+      buildingBlocksSegment2.addEventListener("click", function (e) {
+        window.location.href = "./home-opcoes.html";
+      });
+    }
+  </script>
+</body>
+</html>

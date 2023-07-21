@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./bem51.css" />
+    <script src="traducao.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap"
+    />
+  </head>
+  <body>
+    <section class="bem5">
+      <div class="title19" name="identificar" data-key="titulo2" >Como fazer o bem</div>
+      <div class="texto3">
+        <header class="title20">
+          <div class="title21" name="identificar" data-key="t27">5º - Mantendo os cuidados</div>
+        </header>
+        <div class="somos2">
+          <div class="agora-para-manter" name="identificar" data-key="t28">
+            Agora, para manter a sua muda crescendo de forma saudável, molhe-a
+            periodicamente a fim de manter o solo sempre úmido, sem excessos.
+          </div>
+        </div>
+        <div class="somos2">
+          <div class="agora-para-manter" name="identificar" data-key="t29">
+            Caso sinta conveniente, faça adubações complementares ao longo do
+            tempo.
+          </div>
+        </div>
+      </div>
+      <div class="actions5">
+        <button class="button14">
+          <div class="state-layer32" id="stateLayerContainer">
+            <div class="label-text23">Anterior</div>
+          </div>
+        </button>
+        <div class="pagination-dots1">
+          <div class="dot3"></div>
+          <div class="dot3"></div>
+          <div class="dot3"></div>
+          <div class="dot3"></div>
+          <div class="dot7"></div>
+        </div>
+        <button class="button15" id="button1">
+          <div class="state-layer33">
+            <div class="label-text24">entendi</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <script>
+      const currentPage = "Bem5";
+      document.addEventListener("DOMContentLoaded", function () {
+  traduzir();
+});
+      var stateLayerContainer = document.getElementById("stateLayerContainer");
+      if (stateLayerContainer) {
+        stateLayerContainer.addEventListener("click", function (e) {
+          window.location.href = "./bem4.html";
+        });
+      }
+      
+      var button1 = document.getElementById("button1");
+      if (button1) {
+        button1.addEventListener("click", function (e) {
+          window.location.href = "./home-bem.html";
+        });
+      }
+      </script>
+  </body>
+</html>

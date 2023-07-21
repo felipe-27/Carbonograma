@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./home-calculo1.css" />
+  <!-- script Tradução -->
+  <script src="traducao.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+  <section class="home-calculo">
+    <header class="title42">
+      <div class="title43" name="identificar" data-key="title">Calculadora</div>
+    </header>
+    <div class="content8">
+      <label class="body8" name="identificar" data-key="subtitle">Descubra agora quanto gás carbônico é gerado pelos
+        costumes do seu dia a dia</label>
+      <div class="vo">    
+        <img class="novo" alt="" src="public/home/manuel.png" />
+      </div>
+      <button class="button28" id="button">
+        <div class="state-layer46">
+          <div class="label-text37" name="identificar" data-key="start">Começar</div>
+        </div>
+      </button>
+    </div>
+    <div class="navigation-bar3">
+      <div class="building-blocks-segment9" id="buildingBlocksSegment">
+        <div class="icon-container9">
+          <div class="state-layer47">
+            <img class="home-icon" alt="" src="public/navigation/home.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="building-blocks-segment10">
+        <div class="icon-container10">
+          <div class="state-layer47">
+            <img class="home-icon" alt="" src="public/navigation/calculadora-ativo.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="building-blocks-segment9" id="buildingBlocksSegment2">
+        <div class="icon-container9">
+          <div class="state-layer47">
+            <img class="home-icon" alt="" src="public/navigation/opcoes.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const currentPage = "homeCalculo";
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      traduzir();
+    });
+
+    var button = document.getElementById("button");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        window.location.href = "./calculo.html";
+      });
+    }
+
+    var buildingBlocksSegment = document.getElementById("buildingBlocksSegment");
+    if (buildingBlocksSegment) {
+      buildingBlocksSegment.addEventListener("click", function (e) {
+        window.location.href = "./home-bem.html";
+      });
+    }
+
+    var buildingBlocksSegment2 = document.getElementById("buildingBlocksSegment2");
+    if (buildingBlocksSegment2) {
+      buildingBlocksSegment2.addEventListener("click", function (e) {
+        window.location.href = "./home-opcoes.html";
+      });
+    }
+    
+  </script>
+</body>
+
+</html>

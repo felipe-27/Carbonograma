@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./bem31.css" />
+    <script src="traducao.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap"
+    />
+  </head>
+  <body>
+    <section class="bem3">
+      <div class="title25" name="identificar" data-key="titulo2">Como fazer o bem</div>
+      <div class="texto5">
+        <header class="title26">
+          <div class="title27" name="identificar" data-key="t20" >3º - Decidindo o adubo</div>
+        </header>
+        <div class="somos6">
+          <div class="em-seguida-precisamos" name="identificar" data-key="t21">
+            Em seguida, precisamos falar sobre o adubamento da terra, processo
+            vital para o crescimento sadio da muda e para seu enraizamento no
+            solo.
+          </div>
+        </div>
+        <div class="somos6">
+          <div class="em-seguida-precisamos" name="identificar" data-key="t22">
+            Assim, convém saber que adubos como calcário, esterco de gado e de
+            galinha, compostos orgânicos ou húmus de galinha costumam ser os
+            mais comuns.
+          </div>
+        </div>
+        <div class="somos6">
+          <div class="em-seguida-precisamos" name="identificar" data-key="t23">
+            No entanto, antes de decidir qual será o melhor produto a ser
+            utilizado, conheça a árvore que você pretende plantar, já que cada
+            espécie necessita de um tipo de adubo.
+          </div>
+        </div>
+      </div>
+      <div class="actions7">
+        <button class="button18" id="button">
+          <div class="state-layer36">
+            <div class="label-text27">Anterior</div>
+          </div>
+        </button>
+        <div class="pagination-dots3">
+          <div class="dot13"></div>
+          <div class="dot13"></div>
+          <div class="dot15"></div>
+          <div class="dot13"></div>
+          <div class="dot13"></div>
+        </div>
+        <button class="button18" id="button1">
+          <div class="state-layer36">
+            <div class="label-text27">Próximo</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <script>
+       const currentPage = "Bem3";
+
+document.addEventListener("DOMContentLoaded", function () {
+  traduzir();
+});
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "./bem2.html";
+        });
+      }
+      
+      var button1 = document.getElementById("button1");
+      if (button1) {
+        button1.addEventListener("click", function (e) {
+          window.location.href = "./bem4.html";
+        });
+      }
+      </script>
+  </body>
+</html>

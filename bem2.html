@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./bem21.css" />
+    <script src="traducao.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap"
+    />
+  </head>
+  <body>
+    <section class="bem2">
+      <div class="title28" name="identificar" data-key="titulo2">Como fazer o bem</div>
+      <div class="texto6">
+        <header class="title29">
+          <div class="title30" name="identificar" data-key="t17" >2º - Escolha as medidas</div>
+        </header>
+        <div class="somos8">
+          <div class="entrando-agora-em" name="identificar" data-key="t18">
+            Entrando agora em detalhes mais técnicos, para que uma árvore possa
+            crescer adequadamente, é necessário tomar as medidas certas em
+            relação ao buraco em que a planta será colocada:
+          </div>
+        </div>
+        <div class="somos8">
+          <div class="entrando-agora-em" name="identificar" data-key="t19">
+            Para árvores com mais de 1,80 metros, é necessário um buraco de 60
+            cm de profundidade, caso o solo seja fofo, 60 cm de largura. Caso
+            você utilize mudas menores, buracos de aproximadamente um palmo de
+            fundura já dão conta do recado.
+          </div>
+        </div>
+      </div>
+      <div class="actions8">
+        <button class="button20" id="button">
+          <div class="state-layer38">
+            <div class="label-text29">Anterior</div>
+          </div>
+        </button>
+        <div class="pagination-dots4">
+          <div class="dot18"></div>
+          <div class="dot19"></div>
+          <div class="dot18"></div>
+          <div class="dot18"></div>
+          <div class="dot18"></div>
+        </div>
+        <button class="button20" id="button1">
+          <div class="state-layer38">
+            <div class="label-text29">Próximo</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <script>
+      const currentPage = "Bem2";
+      document.addEventListener("DOMContentLoaded", function () {
+  traduzir();
+});
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "./bem1.html";
+        });
+      }
+      
+      var button1 = document.getElementById("button1");
+      if (button1) {
+        button1.addEventListener("click", function (e) {
+          window.location.href = "./bem3.html";
+        });
+      }
+      </script>
+  </body>
+</html>

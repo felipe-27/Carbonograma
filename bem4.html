@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./bem41.css" />
+    <script src="traducao.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap"
+    />
+  </head>
+  <body>
+    <section class="bem4">
+      <div class="title22" name="identificar" data-key="titulo2">Como fazer o bem</div>
+      <div class="texto4">
+        <header class="title23">
+          <div class="title24" name="identificar" data-key="t24">4º - Hora de plantar!</div>
+        </header>
+        <div class="somos4">
+          <div class="por-fim" name="identificar" data-key="t25">
+            Por fim, é chegada a hora de plantar. Para tal, retire a embalagem
+            da muda com cuidado para não desmanchar o torrão de protege as
+            raízes.
+          </div>
+        </div>
+        <div class="somos4">
+          <div class="por-fim" name="identificar" data-key="t26">
+            Coloque a muda na vertical e preste atenção à altura do torrão em
+            relação ao solo, após isso, complete o espaço com terra. Pronto,
+            você acabou de plantar a sua primeira árvore!
+          </div>
+        </div>
+      </div>
+      <div class="actions6">
+        <button class="button16" id="button">
+          <div class="state-layer34">
+            <div class="label-text25">Anterior</div>
+          </div>
+        </button>
+        <div class="pagination-dots2">
+          <div class="dot8"></div>
+          <div class="dot8"></div>
+          <div class="dot8"></div>
+          <div class="dot11"></div>
+          <div class="dot8"></div>
+        </div>
+        <button class="button16" id="button1">
+          <div class="state-layer34">
+            <div class="label-text26">Próximo</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <script>
+      const currentPage = "Bem4";
+      document.addEventListener("DOMContentLoaded", function () {
+  traduzir();
+});
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "./bem3.html";
+        });
+      }
+      
+      var button1 = document.getElementById("button1");
+      if (button1) {
+        button1.addEventListener("click", function (e) {
+          window.location.href = "./bem5.html";
+        });
+      }
+      </script>
+  </body>
+</html>
