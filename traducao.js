@@ -1,4 +1,3 @@
-
 function traduzir() {
     if (!localStorage.getItem("language")) {
         // Se não existir, cria a chave com o valor padrão
@@ -123,6 +122,7 @@ var translations = {
             b4:"Caso seja perguntado sobre algum produto ou serviço que você não tenha utilizado, preencha as lacunas com o número 0.",
             b5:"Começar",
             b6:"Voltar",
+            v1:"voos",
 
             //energia
             b7:"Energia",
@@ -144,8 +144,8 @@ var translations = {
             //transporte-terrestre
             t1:"Transporte",
             b22:"Escolha seu veículo",            
-            b49:"Carro",// esse dois deram pau é eu não faço a menor ideia 
-            b50:"Moto",
+            c3:"Carro",// esse dois deram pau é eu não faço a menor ideia 
+            c4:"Moto",
             b23:"Por favor preencha este campo",
             b24:"Qual o porte do veículo?",
             b25:"Porte",
@@ -207,6 +207,7 @@ var translations = {
             b4:"If you are asked about a product or service that you have not used, leave the fields blank.",
             b5:"Start",
             b6:"Back",
+            v1:"Flight            ",
             
             //energia
             b7:"Energy",
@@ -226,7 +227,9 @@ var translations = {
             
             //transporte-terrestre
             t1:"Transport",
-            b22:"Choose your vehicle", 
+            b22:"Choose your vehicle",
+            c3:"Car",
+            c4:"Motorcycle", 
             b23:"Please fill in this field", 
             b24:"What is the size of the vehicle?", 
             b25:"Size",
@@ -240,6 +243,7 @@ var translations = {
             b33:"Flex",
             b34:"GNV",
             b35:"How many km per day do you drive?",
+            
 
             //alimentacao
             b36:"Alimentation",
