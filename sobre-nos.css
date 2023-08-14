@@ -1,11 +1,13 @@
 /* Ajuste de altura */
-html{
+html {
   height: 100%;
 }
+
 body {
   min-height: 100%;
   display: flex;
 }
+
 /* section de conteudo, dentro do html e body */
 .sobre-nos {
   min-height: 100%;
@@ -15,6 +17,7 @@ body {
   margin: 0;
   line-height: normal;
 }
+
 .vector-icon {
   position: absolute;
   height: 65.38%;
@@ -27,11 +30,13 @@ body {
   overflow: hidden;
   max-height: 100%;
 }
+
 .icon9,
 .sobre-nos1 {
   position: absolute;
   top: 0;
 }
+
 .icon9 {
   cursor: pointer;
   border: 0;
@@ -41,6 +46,7 @@ body {
   width: 32px;
   height: 32px;
 }
+
 .sobre-nos1 {
   left: calc(50% - 122px);
   line-height: 32px;
@@ -52,6 +58,7 @@ body {
   width: 244px;
   mix-blend-mode: normal;
 }
+
 .title15 {
   align-self: stretch;
   position: relative;
@@ -61,79 +68,13 @@ body {
   font-size: 24px;
   font-family: Rubik;
 }
-.fundao-salvador-arena {
-  font-size: 24px;
-  font-weight: 600;
-}
-.representamos-a-fundao-container {
-  flex: 1;
-  position: relative;
-  letter-spacing: 0.5px;
-}
-.somos {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  padding: 24px;
-  align-items: center;
-  justify-content: center;
-}
-.fsa,
-.logo-icon {
-  width: 120px;
-  height: 120px;
-}
-.logo-icon {
-  position: absolute;
-  top: calc(50% - 60px);
-  left: calc(50% - 60px);
-  object-fit: cover;
-}
-.fsa {
-  position: relative;
-  flex-shrink: 0;
-  filter: drop-shadow(0 4px 8px #00000025);
-}
-.nossa-missao-child {
-  position: absolute;
-  margin: 0 !important;
-  height: calc(100% + 151px);
-  width: calc(100% + 52px);
-  top: -88.5px;
-  right: -29px;
-  bottom: -62.5px;
-  left: -23px;
-  opacity: 0.1;
-  z-index: 0;
-}
-.nesse-interim-a {
-  flex: 1;
-  position: relative;
-  letter-spacing: 0.5px;
-  z-index: 1;
-}
-.content4,
-.nossa-missao {
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-}
-.nossa-missao {
-  flex-direction: row;
-  padding: 0 29px;
-  justify-content: center;
-  position: relative;
-}
-.content4 {
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 32px;
-}
+
 .button-header {
   align-self: stretch;
   position: relative;
   letter-spacing: 0.5px;
 }
+
 .label-text22 {
   position: relative;
   font-size: 16px;
@@ -145,6 +86,7 @@ body {
   color: #513720;
   text-align: center;
 }
+
 .state-layer31 {
   display: flex;
   flex-direction: row;
@@ -152,6 +94,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .button13 {
   cursor: pointer;
   border: 0;
@@ -162,6 +105,7 @@ body {
   overflow: hidden;
   justify-content: center;
 }
+
 .action,
 .button13,
 .sobre-nos {
@@ -169,12 +113,14 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .action {
   align-self: stretch;
   padding: 32px;
   justify-content: center;
   gap: 24px;
 }
+
 .sobre-nos {
   position: relative;
   background: linear-gradient(168.55deg, #279d3e, #176727);
@@ -188,4 +134,81 @@ body {
   font-size: 22px;
   color: #fffbff;
   font-family: "Source Sans Pro";
+}
+
+/* estilos predefinidos */
+.content4 {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.somos {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fundao-salvador-arena {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.representamos-a-fundao-container {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.fsa {
+  position: relative;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px #00000025);
+  width: 120px;
+  height: 120px;
+}
+
+.logo-icon {
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+}
+
+.nossa-missao {
+  flex-direction: row;
+  padding: 0 29px;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.nossa-missao-child {
+  position: absolute;
+  margin: 0 !important;
+  height: calc(100% + 151px);
+  width: calc(100% + 52px);
+  top: -88.5px;
+  right: -29px;
+  bottom: -62.5px;
+  left: -23px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.nesse-interim-a {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.5px;
+  z-index: 1;
 }

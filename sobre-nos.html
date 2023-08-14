@@ -1,87 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./sobre-nos.css" />
-    <script src="traducao.js" defer></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap"
-    />
-  </head>
-  <body>
-    <a href="index.html" class="fade-out"></a>
-</div>
-    <div class="sobre-nos">
-      <header class="title15">
-        <button class="icon9" id="icon">
-          <img class="vector-icon" alt="" src="public/navigation/seta-left.svg" />
-        </button>
-        <div class="sobre-nos1" name="identificar" data-key="titulo4">Sobre nós</div>
-      </header>
-      <div class="content4">
-        <div class="somos">
-          <div class="representamos-a-fundao-container" >
-            <span name="identificar" data-key="t35">Representamos a </span
-            ><span class="fundao-salvador-arena">Fundação Salvador Arena</span
-            ><span name="identificar" data-key="t36"
-              >, uma entidade sem fins lucrativos estruturada pelo engenheiro
-              Salvador Arena e formalmente constituída em 1964. Seu principal
-              intuito é ser um suporte social que estenda a mão àqueles que
-              estejam em condição de vulnerabilidade social.</span
-            >
-          </div>
-        </div>
-        <div class="fsa">
-          <img class="logo-icon" alt="" src="public/sobre-nos/logo-fsa.png" />
-        </div>
-        <div class="nossa-missao">
-          <div class="nossa-missao-child"></div>
-          <div class="nesse-interim-a" name="identificar" data-key="t37">
-            Nesse interim, a missão a ser exercida pela nossa equipe é dar
-            continuidade ao pensamento altruísta de Salvador Arena, através do
-            apoio ou da realização de projetos e programas sociais nas áreas da
-            educação, saúde, habitação e assistência social, em prol de uma
-            sociedade melhor e mais igualitária.
-          </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./sobre-nos.css" />
+  <script src="traducao.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+  <a href="index.html" class="fade-out"></a>
+  </div>
+  <div class="sobre-nos">
+    <header class="title15">
+      <button class="icon9" id="icon">
+        <img class="vector-icon" alt="" src="public/navigation/seta-left.svg" />
+      </button>
+      <div class="sobre-nos1" name="identificar" data-key="titulo4">Sobre nós</div>
+    </header>
+
+    <!-- divs de textos -->
+    <div class="content4">
+
+      <!-- representamos -->
+      <!-- <section class="texto-amarelo"> </section> -->
+      <div class="somos">
+        <div class="representamos-a-fundao-container"> 
+          <span name="identificar" data-key="t35">Representamos a </span>
+          <span class="fundao-salvador-arena">Fundação Salvador Arena</span><span name="identificar" data-key="t36">, 
+            uma entidade sem fins lucrativos
+            estruturada pelo engenheiro Salvador Arena e formalmente
+            constituída em 1964. Seu principal
+            intuito é ser um suporte social que estenda a mão àqueles que
+            estejam em condição de vulnerabilidade social.</span>           
         </div>
       </div>
-      <div class="action">
-        <div class="button-header" name="identificar" data-key="t38">
-          Conheça a equipe que desenvolveu o aplicativo
-        </div>
-        <button class="button13" id="button">
-          <div class="state-layer31">
-            <div class="label-text22" name="identificar" data-key="t3">Confira</div>
-          </div>
-        </button>
+
+      <!-- logo -->
+      <!-- <section class="logo"> </section> -->
+      <div class="fsa">
+        <img class="logo-icon" alt="" src="public/sobre-nos/logo-fsa.png" />
       </div>
-    </div>
-
-    <script>
-       const currentPage = "nos";
-
-document.addEventListener("DOMContentLoaded", function () {
-  traduzir();
-});
-      var icon = document.getElementById("icon");
-      if (icon) {
-        icon.addEventListener("click", function (e) {
-          window.location.href = "./home-bem.html";
-        });
-      }
       
-      var button = document.getElementById("button");
-      if (button) {
-        button.addEventListener("click", function (e) {
-          window.location.href = "./sobre-equipe.html";
-        });
-      }
-      </script>
-  </body>
+      <!-- missao -->
+      <!-- <section class="texto-azul"> </section> -->
+      <div class="nossa-missao">
+        <div class="nossa-missao-child"></div>
+        <div class="nesse-interim-a" name="identificar" data-key="t37">
+          Nesse interim, a missão a ser exercida pela nossa equipe é dar
+          continuidade ao pensamento altruísta de Salvador Arena, através do
+          apoio ou da realização de projetos e programas sociais nas áreas da
+          educação, saúde, habitação e assistência social, em prol de uma
+          sociedade melhor e mais igualitária.
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- botao -->
+    <!-- <section class="texto"> </section> -->
+    <div class="action">
+      <div class="button-header" name="identificar" data-key="t38">
+        Conheça a equipe que desenvolveu o aplicativo
+      </div>
+      <button class="button13" id="button">
+        <div class="state-layer31">
+          <div class="label-text22" name="identificar" data-key="t3">Confira</div>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const currentPage = "nos";
+
+    document.addEventListener("DOMContentLoaded", function () {
+      traduzir();
+    });
+    var icon = document.getElementById("icon");
+    if (icon) {
+      icon.addEventListener("click", function (e) {
+        window.location.href = "./home-bem.html";
+      });
+    }
+
+    var button = document.getElementById("button");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        window.location.href = "./sobre-equipe.html";
+      });
+    }
+  </script>
+</body>
+
 </html>
