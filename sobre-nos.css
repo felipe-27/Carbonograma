@@ -106,21 +106,6 @@ body {
   justify-content: center;
 }
 
-.action,
-.button13,
-.sobre-nos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.action {
-  align-self: stretch;
-  padding: 32px;
-  justify-content: center;
-  gap: 24px;
-}
-
 .sobre-nos {
   position: relative;
   background: linear-gradient(168.55deg, #279d3e, #176727);
@@ -134,9 +119,13 @@ body {
   font-size: 22px;
   color: #fffbff;
   font-family: "Source Sans Pro";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* estilos predefinidos */
+
+/* estilos predefinidos - conteúdo*/
 .content4 {
   flex-direction: column;
   justify-content: flex-start;
@@ -144,28 +133,36 @@ body {
   align-self: stretch;
   display: flex;
   align-items: center;
-}
-
-.somos {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  padding: 24px;
-  align-items: center;
   justify-content: center;
 }
 
-.fundao-salvador-arena {
+.texto {
+  flex-direction: row;
+  padding: 24px;
+}
+
+.action {
+  align-self: stretch;
+  padding: 32px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.negrito {
   font-size: 24px;
   font-weight: 600;
 }
 
-.representamos-a-fundao-container {
-  flex: 1;
+.representamos-a-fundacao,
+.missao-equipe {
   position: relative;
   letter-spacing: 0.5px;
 }
 
+/* logo */
 .fsa {
   position: relative;
   flex-shrink: 0;
@@ -181,34 +178,4 @@ body {
   object-fit: cover;
   width: 120px;
   height: 120px;
-}
-
-.nossa-missao {
-  flex-direction: row;
-  padding: 0 29px;
-  justify-content: center;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-}
-
-.nossa-missao-child {
-  position: absolute;
-  margin: 0 !important;
-  height: calc(100% + 151px);
-  width: calc(100% + 52px);
-  top: -88.5px;
-  right: -29px;
-  bottom: -62.5px;
-  left: -23px;
-  opacity: 0.1;
-  z-index: 0;
-}
-
-.nesse-interim-a {
-  flex: 1;
-  position: relative;
-  letter-spacing: 0.5px;
-  z-index: 1;
 }
