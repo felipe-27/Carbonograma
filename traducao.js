@@ -111,12 +111,170 @@ var translations = {
             t38: "Conheça a equipe que desenvolveu o aplicativo",
             t3: "Nossa equipe",
 
+        },
+        calculo: {
+            a1:"Próximo",
+            a2:"Anterior",
+            a3:"Finalizar",
+            //calculo
+            b1:"Pronto para os Cálculos?",
+            b2:"Responda algumas questões para o sistema do nosso aplicativo realizar os cálculos necessários.",
+            b3:"No final, saiba quantas árvores você teria que plantar para recompensar as taxas de carbono que você emitiu!",
+            b4:"Caso seja perguntado sobre algum produto ou serviço que você não tenha utilizado, preencha as lacunas com o número 0.",
+            b5:"Começar",
+            b6:"Voltar",
 
+            //energia
+            b7:"Energia",
+            b8:"Diga a quantidade por mês que você usa de:",
+            b9:"Energia elétrica",
+            b10:"Gás natural",
+            b11:"Botijão de gás (GLP)",
+            b12:"botijões",
+            b13:"Quantas pessoas moram na sua casa?",
+            b14:"*Incluindo você",
 
-        }
+            //error
+            b17:"Tem algo errado! Está faltando alguma coisa........",
+            b18:"Recalcular",
+            b19:"Sair",
+            b20:"Por favor cheque novamente as informações fornecidas. Certifique-se que colocou tudo certo",
+            b21:"Lembre-se: Caso seja perguntado sobre algum produto ou serviço que você não tenha utilizado, preencha as lacunas com o número 0.",
+            
+            //transporte-terrestre
+            t1:"Transporte",
+            b22:"Escolha seu veículo",            
+            b49:"Carro",// esse dois deram pau é eu não faço a menor ideia 
+            b50:"Moto",
+            b23:"Por favor preencha este campo",
+            b24:"Qual o porte do veículo?",
+            b25:"Porte",
+            b26:"Pequeno",
+            b27:"Médio",
+            b28:"Grande",
+            b29:"Escolha o tipo de combustível",
+            b30:"Gasolina",
+            b31:"Diesel",
+            b32:"Híbrido", 
+            b33:"Flex", 
+            b34:"GNV",
+            b35:"Em média, quantos km por dia você dirige?",
+           
 
+            //alimentacao
+            b36:"Alimentos",
+            b37:"Durante a semana, com que frequência você consome:",              
+            b38:"Não consumo", 
+            b39:"Diariamente", 
+            b40:"Carne Vermelha",
+            b41:"Carne de Frango",            
+            b42:"Carne de Porco",
+            b43:"Leite",
+            b44:"Ovos",
+            b45:"Queijo",
+            b46:" Por quantas horas você viajou de avião no último ano? ",
+            b47:"Qual a quantidade de passageiros, em média, de cada voo?",
+            b48:"*Caso não saiba, use 300",
+
+            //resultados 
+            b50:"Resultados",
+            b51:"Emissão",
+            b52:"Árvores",
+            b53:"Gráfico",
+            b54:"Total das suas emissões:",
+            b55:"(tonCO2 por ano)",
+            b56:"COMPARE",
+            b57:"Média de emissões per capita no Brasil:",
+            b58:"(tonCO2 por ano)",
+            b59:"CALCULAR NOVAMENTE",
+            b60:"Energia doméstica",
+            b61:"Transporte aéreo",
+            b62:"Transporte terrestre",
+            b63:"Alimentação",
+            b64:"Árvores necessárias para compensação:",
+
+        },
     },
     en: {
+        calculo: {
+            a1:"Next",//precisa conferir se fiz o comando certo em todos pq se não me engano tem uma pagina que deu merda 
+            a2:"Previous",
+            a3:"Finished",
+            //calculo
+            b1:"READY TO CALCULATE?",
+            b2:"Answer some questions for our application system to perform the necessary calculations.",
+            b3:"In the end, find out how many trees you would have to plant to reward the carbon taxes you emitted! ",
+            b4:"If you are asked about a product or service that you have not used, leave the fields blank.",
+            b5:"Start",
+            b6:"Back",
+            
+            //energia
+            b7:"Energy",
+            b8:"How much per month do you use of:",
+            b13:"How many people live in your house?",
+            b14:"*Including you",
+            b9:"Eletric Energy",
+            b10:"Natural gas",
+            b11:"Gas Canister",
+            
+            //error
+            b17:"There's something wrong! Something's missing....",
+            b18:"Recalculate", 
+            b19:"Exit", 
+            b20:"Please double-check the information provided. Make sure you put everything right", 
+            b21:"Remember: If you are asked about a product or service that you have not used, fill in the blanks with the number 0.", 
+            
+            //transporte-terrestre
+            t1:"Transport",
+            b22:"Choose your vehicle", 
+            b23:"Please fill in this field", 
+            b24:"What is the size of the vehicle?", 
+            b25:"Size",
+            b26:"Small",
+            b27:"Medium",
+            b28:"Large",
+            b29:"Choose the type of fuel",
+            b30:"Gasoline",
+            b31:"Diesel",
+            b32:"Hybrid",
+            b33:"Flex",
+            b34:"GNV",
+            b35:"How many km per day do you drive?",
+
+            //alimentacao
+            b36:"Alimentation",
+            b37:"During the week, how often do you consume:",
+            b38:"I don't consume",
+            b39:"Daily",
+            b40:"Beef",
+            b41:"Chiken",
+            b42:"Pork",
+            b43:"Milk",
+            b44:"Eggs",
+            b45:"Cheese",
+            b46:" How many hours have you traveled by plane in the last year? ",
+            b47:"What is the average number of passengers on each flight?",
+            b48:"*If you don't know, use 300",
+
+            //resultados 
+            b50:"Results",// esse eu coloquei em varias paginas talvez haja algum tipo de problema porém não achei nenhum en quanto eu fiz 
+            b51:"Emission",
+            b52:"Trees",
+            b53:"Graph",
+            b54:"Total emissions:",
+            b55:"(tonCO2 per year)",
+            b56:"COMPARE",
+            b57:"Average emissions per capita in Brazil:",
+            b58:"(tonCO2 per year)",
+            b59:"CALCULATE AGAIN",
+            b60:"Domestic Energy",
+            b61:"Air Transport",
+            b62:"Ground transportation",
+            b63:"Alimentation",
+            b64:"Trees needed for clearing:",
+            
+        },
+
         homeOptions: {
             title: "Options",
             subtitle: "About",
@@ -201,9 +359,8 @@ var translations = {
             t37: "In the meantime, the mission to be carried out by our team is to continue the altruistic thinking of Salvador Arena, through the support or implementation of social projects and programs in the areas of education, health, housing, and social assistance, in favor of a better society and more egalitarian.",
             t38: "Discover the team that developed the app",
             t3: "Check it out!",
-        }
-
-
+        },
+        
     }
 
 }

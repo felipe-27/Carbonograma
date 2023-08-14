@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="./resultado-arvore1.css" />
-
+    <script src="traducao.js" defer></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap"
@@ -17,12 +17,12 @@
   <body>
     <section class="resultado-arvore">
       <div class="title-group">
-        <div class="title11"><div class="title12">Resultados</div></div>
+        <div class="title11"><div class="title12" name="identificar" data-key="b50">Resultados</div></div>
         <div class="indicator1">
           <div class="building-blocks3" id="buildingBlocksContainer">
             <div class="container6">
               <div class="state-layer17">
-                <div class="label-text14">Emissão</div>
+                <div class="label-text14" name="identificar" data-key="b51">Emissão</div>
               </div>
             </div>
           </div>
@@ -34,21 +34,21 @@
                   alt=""
                   src="public/iconscheck-24px1.svg"
                 />
-                <div class="label-text14">Árvores</div>
+                <div class="label-text14" name="identificar" data-key="b52">Árvores</div>
               </div>
             </div>
           </div>
           <div class="building-blocks5" id="buildingBlocksContainer2">
             <div class="container8">
               <div class="state-layer17">
-                <div class="label-text14">Gráfico</div>
+                <div class="label-text14" name="identificar" data-key="b53">Gráfico</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="arvores">
-        <div class="descricao6">Árvores necessárias para compensação:</div>
+        <div class="descricao6" name="identificar" data-key="b64">Árvores necessárias para compensação:</div>
         <div class="ilustracao2">
           <img class="folha-icon" alt="" src="public/calculo/resultado/folha.svg" />
           <div class="valor" id="tree">9999</div>
@@ -57,7 +57,7 @@
       <div class="button-container">
         <button class="button11" id="button">
           <div class="state-layer20">
-            <div class="label-text17">CALCULAR NOVAMENTE</div>
+            <div class="label-text17" name="identificar" data-key="b59">CALCULAR NOVAMENTE</div>
           </div>
         </button>
       </div>
@@ -85,6 +85,19 @@
     </section>
 
     <script>
+     const currentPage = "calculo";
+
+var close = document.getElementById("close");
+if (close) {
+  close.addEventListener("click", function (e) {
+    closeAlert();
+  });
+} 
+
+document.addEventListener('DOMContentLoaded', function () {
+  traduzir();
+})
+
       var arvore = localStorage.getItem('arvores')
       document.getElementById("tree").innerHTML = arvore
 

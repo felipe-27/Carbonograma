@@ -6,13 +6,13 @@
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <!-- CSS -->
   <link rel="stylesheet" href="./transporte-terrestre.css" />
-  <!-- SweetAlert - criar popups -->
+  <!-- libraries -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <!-- script -->
   <script src="script-valores.js" defer></script>
-  <!-- Fontes -->
+  <script src="traducao.js" defer></script>
+  <!-- fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
 </head>
@@ -26,6 +26,7 @@
       </button>
     </header>
 
+    <!-- Barra de progresso -->
     <div class="progress-bar3">
       <div class="transporte">
         <div class="dots12">
@@ -38,7 +39,7 @@
         <div class="dots13">
           <img class="fundo-icon13" alt="" src="public/calculo/progress-bar/circle-active.svg" />
           <img class="onibus-icon" alt="" src="public/calculo/progress-bar/bus-ativo.svg" />
-          <div class="alimentao3">Transporte</div>
+          <div class="alimentao3" name="identificar" data-key="t1">Transporte</div>
         </div>
         <div class="progresso9">
           <div class="linha18"></div>
@@ -59,35 +60,35 @@
     <form id="form">
       <div class="content3">
         <div class="veculo">
-          <div class="title6">Escolha seu veículo</div>
-          <div class="erro" id="erro" oninput="">Por favor preencha este campo</div>
+          <div class="title6" name="identificar" data-key="b22">Escolha seu veículo</div>
+          <div class="erro" id="erro" oninput="" name="identificar" data-key="b23">Por favor preencha este campo</div>
           <select name="sltVeiculo" id="idVeiculo" class="caixa-de-texto6">
-            <option name="veiculo" value="1">Carro</option>
-            <option name="veiculo" value="2">Moto</option>
+            <option name="veiculo" value="1" name="identificar" data-key="b49">Carro</option>
+            <option name="veiculo" value="2" name="identificar" data-key="b5">Moto</option>
           </select>
         </div>
         <div class="veculo">
-          <div class="title6">Qual o porte do veículo?</div>
+          <div class="title6" name="identificar" data-key="b24">Qual o porte do veículo?</div>
           <select name="sltPorte" id="idPorte" class="caixa-de-texto6">
-            <option value="" disabled selected hidden>Porte</option>
-            <option value="1">Pequeno</option>
-            <option value="2">Médio</option>
-            <option value="3">Grande</option>
+            <option value="" disabled selected hidden name="identificar" data-key="b25">Porte</option>
+            <option value="1" name="identificar" data-key="b26">Pequeno</option>
+            <option value="2" name="identificar" data-key="b27">Pequeno</option>
+            <option value="3" name="identificar" data-key="b28">Grande</option>
           </select>
         </div>
         <div class="veculo" id="verCombustivel">
-          <div class="title6">Escolha o tipo de combustível</div>
+          <div class="title6" name="identificar" data-key="b29">Escolha o tipo de combustível</div>
           <select name="sltCombustivel" id="idCombustivel" class="caixa-de-texto6">
-            <option value="1">Gasolina</option>
-            <option value="2">Diesel</option>
-            <option value="3">Híbrido</option>
-            <option value="4">Flex</option>
-            <option value="5">GNV</option>
+            <option value="1" name="identificar" data-key="b30">Gasolina</option>
+            <option value="2" name="identificar" data-key="b31">Diesel</option>
+            <option value="3" name="identificar" data-key="b32">Híbrido</option>
+            <option value="4" name="identificar" data-key="b33">Flex</option>
+            <option value="5" name="identificar" data-key="b34">GNV</option>
           </select>
         </div>
         <div class="veculo">
-          <div class="title6">Em média, quantos km por dia você dirige?</div>
-          <input name="numKmRodados" id="kmRodados" class="caixa-de-texto9" type="number" placeholder="Quilômetros"
+          <div class="title6" name="identificar" data-key="b35">Em média, quantos km por dia você dirige?</div>
+          <input name="numKmRodados" id="kmRodados" class="caixa-de-texto9" type="number" name="identificar" data-key="c1"placeholder ="..."
             min="0" onkeyup="chamarVeiculos()" />
         </div>
       </div>
@@ -99,12 +100,12 @@
       <!-- proxima pagina -->
       <button type="submit" class="button8">
         <div class="state-layer8" id="stateLayerContainer">
-          <div class="label-text8">Anterior</div>
+          <div class="label-text8" name="identificar" data-key="a2">Anterior</div>
         </div>
 
       </button><button type="submit" class="button8" id="button1">
         <div class="state-layer9">
-          <div class="label-text8">Próximo</div>
+          <div class="label-text8" name="identificar" data-key="a1">Próximo</div>
         </div>
       </button>
     </div>
@@ -114,27 +115,25 @@
   </section>
 
   <script>
+    const currentPage = "calculo";
+
     var close = document.getElementById("close");
     if (close) {
       close.addEventListener("click", function (e) {
         closeAlert();
       });
-    }
+    } 
 
-    /* salvar valores localStorage */
-    $(document).ready(function () {
-      $('.caixa-de-texto6').change(function () {
-        chamarVeiculos();
-      });
-    });
-
-    /* retornar valores salvos no localStorage */
     document.addEventListener('DOMContentLoaded', function () {
+      traduzir();
+
+      /* retornar valores salvos no localStorage */
       document.getElementById("idVeiculo").value = localStorage.getItem("veiculo");
       document.getElementById("idPorte").value = localStorage.getItem("porte");
       document.getElementById("idCombustivel").value = localStorage.getItem("combustivel");
       document.getElementById("kmRodados").value = localStorage.getItem("kmRodados");
 
+      //seleção padrão no inicio
       function addDefaultOption(elementId, defaultText) {
         if (document.getElementById(elementId).value === "") {
           var option = document.createElement("option");
@@ -152,8 +151,14 @@
       addDefaultOption("idCombustivel", "COMBUSTÍVEIS");
 
       verCombustivel();
-    });
+    });    
 
+    /* salvar valores localStorage */
+    $(document).ready(function () {
+      $('.caixa-de-texto6').change(function () {
+        chamarVeiculos();
+      });
+    });
 
     var stateLayerContainer = document.getElementById("stateLayerContainer");
     if (stateLayerContainer) {

@@ -6,6 +6,7 @@
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <link rel="stylesheet" href="./alimentacao2.css" />
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="traducao.js" defer></script>
   <script src="script-valores.js" defer></script>
 
 
@@ -27,7 +28,7 @@
         <div class="dots8">
           <img class="fundo-icon8" alt="" src="public/calculo/progress-bar/circle-active.svg" />
           <img class="comida-icon" alt="" src="public/calculo/progress-bar/food-ativo.svg" />
-          <div class="alimentao2">Alimentação</div>
+          <div class="alimentao2" name="identificar" data-key="b36">Alimentação</div>
         </div>
         <div class="progresso6">
           <div class="linha9"></div>
@@ -53,12 +54,12 @@
     <!-- Forms -->
     <div class="content2">
 
-      <label class="body3">Durante a semana, com que frequência você consome:</label>
+      <label class="body3" name="identificar" data-key="b37">Durante a semana, com que frequência você consome:</label>
 
       <div class="escolha-alimento">
         <!-- Carne vermelha -->
         <div class="head3">
-          <div class="carne-vermelha">Carne Vermelha</div>
+          <div class="carne-vermelha" name="identificar" data-key="b40">Carne Vermelha</div>
           <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/carne-vermelha.svg" />
         </div>
 
@@ -68,8 +69,8 @@
 
         <div class="forms">
           <div class="descricao">
-            <div class="no-consumo">Não consumo</div>
-            <div class="no-consumo">Diariamente</div>
+            <div class="no-consumo" name="identificar" data-key="b38">Não consumo</div>
+            <div class="no-consumo"name="identificar" data-key="b39">Diariamente</div>
           </div>
           <div class="carnevermelha" id="carneVer" oninput="chamarAlimentos()">
             <input id="b-11" type="radio" name="botoes" value="0" checked>
@@ -88,7 +89,7 @@
       <div class="escolha-alimento">
         <!-- Carne de frango -->
         <div class="head3">
-          <div class="carne-vermelha">Carne de Frango</div>
+          <div class="carne-vermelha" name="identificar" data-key="b41">Carne de Frango</div>
           <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/carne-de-frango.svg" />
         </div>
 
@@ -98,8 +99,8 @@
 
         <div class="forms">
           <div class="descricao">
-            <div class="no-consumo">Não consumo</div>
-            <div class="no-consumo">Diariamente</div>
+            <div class="no-consumo"name="identificar" data-key="b38">Não consumo</div>
+            <div class="no-consumo" name="identificar" data-key="b39">Diariamente</div>
           </div>
           <div class="frango" id="carneFra" oninput="chamarAlimentos()">
             <aling-center id="center">
@@ -120,7 +121,7 @@
       <div class="escolha-alimento">
         <!-- Carne de porco -->
         <div class="head3">
-          <div class="carne-vermelha">Carne de Porco</div>
+          <div class="carne-vermelha" name="identificar" data-key="b42">Carne de Porco</div>
           <img class="carne-de-porco" alt="" src="public/calculo/alimentacao/carne-de-porco.svg" />
         </div>
 
@@ -130,8 +131,8 @@
 
         <div class="forms">
           <div class="descricao">
-            <div class="no-consumo">Não consumo</div>
-            <div class="no-consumo">Diariamente</div>
+            <div class="no-consumo" name="identificar" data-key="b38">Não consumo</div>
+            <div class="no-consumo" name="identificar" data-key="b39">Diariamente</div>
           </div>
 
           <div class="carnedeporco" id="carnePor" oninput="chamarAlimentos()">
@@ -154,7 +155,7 @@
         <!-- Leite -->
 
         <div class="head3">
-          <div class="carne-vermelha">Leite</div>
+          <div class="carne-vermelha" name="identificar" data-key="b43">Leite</div>
           <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/leite.svg" />
         </div>
 
@@ -164,8 +165,8 @@
 
         <div class="forms">
           <div class="descricao">
-            <div class="no-consumo">Não consumo</div>
-            <div class="no-consumo">Diariamente</div>
+            <div class="no-consumo" name="identificar" data-key="b38">Não consumo</div>
+            <div class="no-consumo" name="identificar" data-key="b39">Diariamente</div>
           </div>
           <div class="leite" id="leite" oninput="chamarAlimentos()">
             <aling-center>
@@ -186,7 +187,7 @@
       <div class="escolha-alimento">
         <!-- Ovo -->
         <div class="head3">
-          <div class="carne-vermelha">Ovos</div>
+          <div class="carne-vermelha" name="identificar" data-key="b44">Ovos</div>
           <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/ovo.svg" />
         </div>
 
@@ -196,8 +197,8 @@
 
         <div class="forms">
           <div class="descricao">
-            <div class="no-consumo">Não consumo</div>
-            <div class="no-consumo">Diariamente</div>
+            <div class="no-consumo" name="identificar" data-key="b38">Não consumo</div>
+            <div class="no-consumo" name="identificar" data-key="b39">Diariamente</div>
           </div>
           <div class="egg" id="ovo" oninput="chamarAlimentos()">
             <aling-center>
@@ -218,8 +219,8 @@
       <div class="escolha-alimento">
         <!-- Queijo -->
         <div class="head3">
-          <div class="carne-vermelha">Queijo</div>
-          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/queijo.svg" />
+          <div class="carne-vermelha" name="identificar" data-key="b45">Queijo</div>
+          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/queijo.svg"/>
         </div>
 
         <div class="linha12">
@@ -228,8 +229,8 @@
 
         <div class="forms">
           <div class="descricao">
-            <div class="no-consumo">Não consumo</div>
-            <div class="no-consumo">Diariamente</div>
+            <div class="no-consumo" name="identificar" data-key="b38">Não consumo</div>
+            <div class="no-consumo" name="identificar" data-key="b39">Diariamente</div>
           </div>
 
           <br>
@@ -255,19 +256,21 @@
       <!-- proxima pagina -->
       <button class="button6">
         <div class="state-layer6">
-          <div class="label-text6">Próximo</div>
+          <div class="label-text6"></div>
         </div>
       </button>
 
       <button class="button6" id="button1" onchange="" toogle button()>
         <div class="state-layer7">
-          <div class="label-text6">Próximo</div>
+          <div class="label-text6" name="identificar" data-key="a1">Próximo</div>
         </div>
       </button>
     </div>
   </section>
 
   <script>
+    const currentPage = "calculo"
+
     var close = document.getElementById("close");
     if (close) {
       close.addEventListener("click", function (e) {
@@ -276,6 +279,8 @@
     }
     /* retornar valores salvos no localStorage */
     document.addEventListener('DOMContentLoaded', function () {
+
+      traduzir();
 
       var checkRadio = ['botoes', 'botoes1', 'botoes2', 'botoes3', 'botoes4', 'botoes5'];
       var alimentosObjectsString = localStorage.getItem('alimentosObjects');

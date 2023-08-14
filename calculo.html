@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <script src="traducao.js" defer></script>
   <link rel="stylesheet" href="./calculo1.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
@@ -12,39 +13,48 @@
 <body>
   <section class="calculo">
     <header class="title40">
-      <div class="title41">Pronto para os Cálculos?</div>
+      <div class="title41" name="identificar" data-key="b1">Pronto para os Cálculos?</div>
     </header>
     <div class="content7">
-      <label class="body5">Responda algumas questões para o sistema do nosso aplicativo realizar
-        os cálculos necessários.</label><label class="body5">No final, saiba quantas árvores você teria que plantar para
-        recompensar as taxas de carbono que você emitiu!</label><label class="body5">Caso seja perguntado sobre algum
+      <label class="body5" name="identificar" data-key="b2">Responda algumas questões para o sistema do nosso aplicativo
+        realizar os cálculos necessários.</label>
+      <label class="body5" name="identificar" data-key="b3">No final, saiba quantas
+        árvores você teria que plantar para
+        recompensar as taxas de carbono que você emitiu!</label>
+      <label class="body5" name="identificar" data-key="b4">Caso seja perguntado sobre algum
         produto ou serviço que você não
         tenha utilizado, preencha as lacunas com o número 0.</label>
     </div>
     <div class="actions11">
       <button class="button26" id="Começar calculo">
         <div class="state-layer44">
-          <div class="label-text35">Começar</div>
+          <div class="label-text35" name="identificar" data-key="b5">Começar</div>
         </div>
       </button><button class="button27" id="button1">
         <div class="state-layer44">
-          <div class="label-text36">Voltar</div>
+          <div class="label-text36" name="identificar" data-key="b6">Voltar</div>
         </div>
       </button>
     </div>
   </section>
 
   <script>
+    const currentPage = "calculo";
+
+    document.addEventListener("DOMContentLoaded", function () {
+      traduzir();
+    });
+
     var button = document.getElementById("Começar calculo");
     if (button) {
       button.addEventListener("click", function (e) {
 
+        //manter a língua selecionada após apagar localStorage
         for (let chave in localStorage) {
           if (localStorage.hasOwnProperty(chave) && chave !== "language") {
             localStorage.removeItem(chave);
           }
         };
-        
         window.location.href = "./alimentacao.html";
       });
     }

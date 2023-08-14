@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="./resultado-grafico1.css" />
+    <script src="traducao.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="grafico.js" defer></script>
 
@@ -19,19 +20,19 @@
   <body>
     <section class="resultado-grafico">
       <div class="title-parent">
-        <div class="title9"><div class="title10">Resultados</div></div>
+        <div class="title9"><div class="title10" name="identificar" data-key="b50" >Resultados</div></div>
         <div class="indicator">
           <div class="building-blocks" id="buildingBlocksContainer">
             <div class="container3">
               <div class="state-layer10">
-                <div class="label-text10">Emissão</div>
+                <div class="label-text10" name="identificar" data-key="b51">Emissão</div>
               </div>
             </div>
           </div>
           <div class="building-blocks1" id="buildingBlocksContainer1">
             <div class="container4">
               <div class="state-layer10">
-                <div class="label-text10">Árvores</div>
+                <div class="label-text10" name="identificar" data-key="b52">Árvores</div>
               </div>
             </div>
           </div>
@@ -43,7 +44,7 @@
                   alt=""
                   src="public/iconscheck-24px.svg"
                 />
-                <div class="label-text10">Gráfico</div>
+                <div class="label-text10" name="identificar" data-key="b53">Gráfico</div>
               </div>
             </div>
           </div>
@@ -60,35 +61,35 @@
               <div class="porcentagem-child"></div>
               <div class="div" id="energy">25%</div>
             </div>
-            <div class="transporte-areo">Energia doméstica</div>
+            <div class="transporte-areo" NAME="identificar" data-key="b60"> Energia doméstica</div>
           </div>
           <div class="energia3">
             <div class="porcentagem">
               <div class="porcentagem-item"></div>
               <div class="div" id="voos">25%</div>
             </div>
-            <div class="transporte-areo">Transporte aéreo</div>
+            <div class="transporte-areo"  NAME="identificar" data-key="b61">Transporte aéreo</div>
           </div>
           <div class="energia3">
             <div class="porcentagem">
               <div class="porcentagem-inner"></div>
               <div class="div" id="transporte" > 25%</div>
             </div>
-            <div class="transporte-areo">Transporte terrestre</div>
+            <div class="transporte-areo"  NAME="identificar" data-key="b62">Transporte terrestre</div>
           </div>
           <div class="energia3">
             <div class="porcentagem">
               <div class="rectangle-div"></div>
               <div class="div" id="comida">25%</div>
             </div>
-            <div class="transporte-areo">Alimentação</div>
+            <div class="transporte-areo"  NAME="identificar" data-key="b63">Alimentação</div>
           </div>
         </div>
       </div>
       <div class="button-wrapper">
         <button class="button10" id="button">
           <div class="state-layer13">
-            <div class="label-text13">CALCULAR NOVAMENTE</div>
+            <div class="label-text13" name="identificar" data-key="b59">CALCULAR NOVAMENTE</div>
           </div>
         </button>
       </div>
@@ -116,6 +117,19 @@
     </section>
 
     <script>
+ const currentPage = "calculo";
+
+var close = document.getElementById("close");
+if (close) {
+  close.addEventListener("click", function (e) {
+    closeAlert();
+  });
+} 
+
+document.addEventListener('DOMContentLoaded', function () {
+  traduzir();
+})
+
       var buildingBlocksContainer = document.getElementById(
         "buildingBlocksContainer"
       );

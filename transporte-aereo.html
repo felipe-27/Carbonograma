@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./transporte-aereo.css" />
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="script-valores.js" defer></script>
+  <script src="traducao.js" defer></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
 </head>
@@ -51,20 +52,20 @@
 
     <div class="content">
       <div class="viagem" name="formVoos" id="formVoos">
-        <div class="por-quantas-horas">
+        <div class="por-quantas-horas" name="identificar" data-key="b46">
           Por quantas horas você viajou de avião no último ano?
         </div>
-        <input name="horasAviao" class="caixa-de-texto" type="number" placeholder="Horas" id="horasAviao"
+        <input name="horasAviao" class="caixa-de-texto" type="number" placeholder="..." id="horasAviao"
           oninput="chamarVoos()" />
       </div>
       <div class="viagem">
         <div class="qual-a-quantidade-de-passageir-parent">
-          <div class="por-quantas-horas">
+          <div class="por-quantas-horas" name="identificar" data-key="b47">
             Qual a quantidade de passageiros, em média, de cada voo?
           </div>
-          <div class="caso-no-saiba">*Caso não saiba, use 300</div>
+          <div class="caso-no-saiba" name="identificar" data-key="b48">*Caso não saiba, use 300</div>
         </div>
-        <input name="qntdPessoas" class="caixa-de-texto" type="number" placeholder="Quantidade" id="qntdPessoas"
+        <input name="qntdPessoas" class="caixa-de-texto" type="number" placeholder="..." id="qntdPessoas"
           oninput="chamarVoos()" />
       </div>
     </div>
@@ -72,18 +73,30 @@
     <div class="actions1">
       <div class="button2" id="buttonContainer">
         <div class="state-layer2">
-          <div class="label-text2">Anterior</div>
+          <div class="label-text2" name="identificar" data-key="a2">Anterior</div>
         </div>
       </div>
       <button type=submit class="button3" id="button">
         <div class="state-layer2">
-          <div class="label-text3">Próximo</div>
+          <div class="label-text2" name="identificar" data-key="a1">Próximo</div>
         </div>
       </button>
     </div>
   </section>
 
   <script>
+    const currentPage = "calculo"
+    var close = document.getElementById("close");
+    if (close) {
+      close.addEventListener("click", function (e) {
+        closeAlert();
+      });
+    } 
+
+    document.addEventListener('DOMContentLoaded', function () {
+      traduzir();
+    })
+  
     var close = document.getElementById("close");
     if (close) {
       close.addEventListener("click", function (e) {

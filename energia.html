@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <script src="traducao.js"></script>
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <link rel="stylesheet" href="./energia2.css" />
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -23,7 +24,7 @@
     <div class="progress-bar1">
       <div class="energia1">
         <div class="dots4">
-          <img class="fundo-icon4" alt="" src="public/calculo/progress-bar/circle-done.svg" /> 
+          <img class="fundo-icon4" alt="" src="public/calculo/progress-bar/circle-done.svg" />
           <img class="airplane2-icon" alt="" src="public/calculo/progress-bar/food.svg" />
         </div>
         <div class="progresso3">
@@ -46,20 +47,20 @@
         <div class="dots7">
           <img class="fundo-icon7" alt="" src="public/calculo/progress-bar/circle-active.svg " />
           <img class="energia-icon" alt="" src="public/calculo/progress-bar/energia-ativo.svg" />
-          <div class="alimentao1">Energia</div>
+          <div class="alimentao1" name="identificar" data-key="b7">Energia</div>
         </div>
       </div>
     </div>
 
     <!-- Forms -->
     <div class="content1">
-      <div class="diga-a-quantidade">
+      <div class="diga-a-quantidade" name="identificar" data-key="b8">
         Diga a quantidade por mês que você usa de:
       </div>
       <div class="quantidade-mensal-de">
         <div class="energia-domstica">
           <div class="head">
-            <div class="energia-eltrica">Energia elétrica</div>
+            <div class="energia-eltrica" name="identificar" data-key="b9">Energia elétrica</div>
             <img class="eletrica-icon" alt="" src="public/calculo/energia/eletrica.svg" />
           </div>
           <div class="linha6">
@@ -67,8 +68,7 @@
           </div>
           <div class="box-texto">
             <div class="container">
-              <input class="caixa-de-texto2" type="number" placeholder="Quantidade" id="eletrica"
-                onkeyup="chamarEnergia()" />
+              <input class="caixa-de-texto2" type="number" placeholder="..." id="eletrica" onkeyup="chamarEnergia()" />
             </div>
             <div class="energia-eltrica">kW/h</div>
           </div>
@@ -76,7 +76,7 @@
 
         <div class="energia-domstica">
           <div class="head">
-            <div class="energia-eltrica">Gás natural</div>
+            <div class="energia-eltrica" name="identificar" data-key="b10">Gás natural</div>
             <img class="gas-natural-icon" alt="" src="public/calculo/energia/gas-natural.svg" />
           </div>
           <div class="linha6">
@@ -84,8 +84,7 @@
           </div>
           <div class="box-texto">
             <div class="container">
-              <input class="caixa-de-texto2" type="number" placeholder="Quantidade" id="natural"
-                onkeyup="chamarEnergia()" />
+              <input class="caixa-de-texto2" type="number" placeholder="..." id="natural" onkeyup="chamarEnergia()" />
             </div>
             <div class="energia-eltrica">m³</div>
           </div>
@@ -93,7 +92,7 @@
 
         <div class="energia-domstica">
           <div class="head">
-            <div class="energia-eltrica">Botijão de gás (GLP)</div>
+            <div class="energia-eltrica" name="identificar" data-key="b11">Botijão de gás (GLP)</div>
             <img class="gas-natural-icon" alt="" src="public/calculo/energia/glp.svg" />
           </div>
           <div class="linha6">
@@ -101,22 +100,21 @@
           </div>
           <div class="box-texto">
             <div class="container">
-              <input class="caixa-de-texto2" type="number" placeholder="Quantidade" id="botijao"
-                onkeyup="chamarEnergia()" />
+              <input class="caixa-de-texto2" type="number" placeholder="..." id="botijao" onkeyup="chamarEnergia()" />
             </div>
-            <div class="energia-eltrica">botijões</div>
+            <div class="energia-eltrica" name="identificar" data-key="b12">botijões</div>
           </div>
         </div>
       </div>
 
       <div class="quantas-pessoas">
         <div class="title5">
-          <div class="diga-a-quantidade">
+          <div class="diga-a-quantidade" name="identificar" data-key="b13">
             Quantas pessoas moram na sua casa?
           </div>
-          <div class="incluindo-voc">*Incluindo você</div>
+          <div class="incluindo-voc" name="identificar" data-key="b14">*Incluindo você</div>
         </div>
-        <input class="caixa-de-texto5" type="number" placeholder="Quantidade" min="{1}" id="pessoasCasa"
+        <input class="caixa-de-texto5" type="number" placeholder="..." min="{1}" id="pessoasCasa"
           onkeyup="chamarEnergia()" />
       </div>
     </div>
@@ -125,18 +123,21 @@
     <div class="actions2">
       <div class="button4" id="buttonContainer">
         <div class="state-layer4">
-          <div class="label-text4">Anterior</div>
+          <div class="label-text4" name="identificar" data-key="a2">Anterior</div>
         </div>
       </div>
       <button class="button5" id="button">
         <div class="state-layer4">
-          <div class="label-text5">Finalizar</div>
+          <div class="label-text5" name="identificar" data-key="a3">Finalizar</div>
         </div>
       </button>
     </div>
   </section>
 
   <script>
+    const currentPage = "calculo";
+
+
     var close = document.getElementById("close");
     if (close) {
       close.addEventListener("click", function (e) {
@@ -145,6 +146,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+      traduzir();
       document.getElementById("eletrica").value = localStorage.getItem("eletrica");
       document.getElementById("natural").value = localStorage.getItem("natural");
       document.getElementById("botijao").value = localStorage.getItem("botijao");

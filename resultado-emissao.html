@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <link rel="stylesheet" href="./resultado-emissao1.css" />
-
+  <script src="traducao.js" defer></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
 </head>
@@ -14,28 +14,28 @@
   <section class="resultado-emissao">
     <div class="title-container">
       <div class="title13">
-        <div class="title14">Resultados</div>
+        <div class="title14" name="identificar" data-key="b50">Resultados</div>
       </div>
       <div class="indicator2">
         <div class="building-blocks6">
           <div class="container9">
             <div class="state-layer24">
               <img class="iconscheck-24px2" alt="" src="public/iconscheck-24px.svg" />
-              <div class="label-text18">Emissão</div>
+              <div class="label-text18" name="identificar" data-key="b51">Emissão</div>
             </div>
           </div>
         </div>
         <div class="building-blocks7" id="buildingBlocksContainer1">
           <div class="container10">
             <div class="state-layer25">
-              <div class="label-text18">Árvores</div>
+              <div class="label-text18"name="identificar" data-key="b52">Árvores</div>
             </div>
           </div>
         </div>
         <div class="building-blocks7" id="buildingBlocksContainer2">
           <div class="container11">
             <div class="state-layer25">
-              <div class="label-text18">Gráfico</div>
+              <div class="label-text18" name="identificar" data-key="b53">Gráfico</div>
             </div>
           </div>
         </div>
@@ -45,19 +45,19 @@
 
       <div class="total-de-emisses">
         <div class="descricao7">
-          <p class="total-de-emisses1">Total das suas emissões:</p>
-          <p class="kgco2-por-ano">(tonCO2 por ano)</p>
+          <p class="total-de-emisses1"name="identificar" data-key="b54">Total das suas emissões:</p>
+          <p class="kgco2-por-ano" name="identificar" data-key="b55">(tonCO2 por ano)</p>
         </div>
         <div class="ilustracao3">
           <img class="cloud-icon" alt="" src="public/calculo/resultado/cloud.svg" />
           <div class="valor1" id="total">99999</div>
         </div>
       </div>
-      <div class="compare">COMPARE</div>
+      <div class="compare" name="identificar" data-key="b56">COMPARE</div>
       <div class="total-de-emisses">
         <div class="descricao7">
-          <p class="total-de-emisses1">Média de emissões per capita no Brasil:</p>
-          <p class="kgco2-por-ano">(tonCO2 por ano)</p>
+          <p class="total-de-emisses1"name="identificar" data-key="b57">Média de emissões per capita no Brasil:</p>
+          <p class="kgco2-por-ano"name="identificar" data-key="b58">(tonCO2 por ano)</p>
         </div>
         <div class="ilustracao3">
           <img class="cloud-icon" alt="" src="public/calculo/resultado/brasil-emissao.svg" />
@@ -70,7 +70,7 @@
     <div class="button-frame">
       <button class="button12" id="button">
         <div class="state-layer27">
-          <div class="label-text21">CALCULAR NOVAMENTE</div>
+          <div class="label-text21"name="identificar" data-key="b59">       </div>
         </div>
       </button>
     </div>
@@ -98,6 +98,18 @@
   </section>
 
   <script>
+     const currentPage = "calculo";
+
+var close = document.getElementById("close");
+if (close) {
+  close.addEventListener("click", function (e) {
+    closeAlert();
+  });
+} 
+
+document.addEventListener('DOMContentLoaded', function () {
+  traduzir();
+})
     var resultadoTotal = localStorage.getItem('resultadoEmissao')
     document.getElementById("total").innerHTML = resultadoTotal
 

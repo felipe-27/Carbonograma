@@ -146,8 +146,6 @@ window.addEventListener("load", function () {
         retornarValorTotal();
     } catch (error) {
         // Redirecionamento para outra página em caso de erro
-        console.error("O seguinte erro ocorreu:", error.message);
-        console.error("Rastreamento da pilha:", error.stack);
-        /* window.location.href = "./error.html"; */
+        window.location.href = "./error.html";
     }
 });
