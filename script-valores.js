@@ -30,7 +30,7 @@ function chamarAlimentos() {
 }
 
 
-function verCombustivel(){
+function verCombustivel() {
   if (localStorage.getItem('veiculo') == 2) { //esconder combustível se for moto
     document.getElementById("verCombustivel").style.display = "none";
   } else {
@@ -51,7 +51,7 @@ function chamarVeiculos() {
   localStorage.setItem("porte", porte);
   localStorage.setItem("combustivel", combustivel);
   localStorage.setItem("kmRodados", kmRodados);
-  
+
   verCombustivel();
 }
 
@@ -89,11 +89,28 @@ function chamarEnergia() {
   localStorage.setItem("pessoasCasa", pessoasCasa);
 }
 
+var selectedLanguage = localStorage.getItem("language");
+console.log(selectedLanguage);
+
+if (selectedLanguage = "pt") {
+  t1 = "Deseja sair?";
+  t2 = "Ao fechar o formulário, os campos preenchidos NÃO serão salvos!";
+  t3 = "Cancelar";
+  t4 = "Sair";
+}
+if (selectedLanguage = "en") {
+  t1 = "Do you want to exit?";
+  t2 = "When closing this forms, the completed fields WILL NOT be saved!";
+  t3 = "Cancel";
+  t4 = "Exit";
+}
+
+
 function closeAlert() {
   swal({
-      title: "Deseja sair?",
-      text: "Ao fechar o formulário, os campos preenchidos NÃO serão salvos!",
-      buttons: ["Cancelar", "Sair"],
+      title: t1,
+      text: t2,
+      buttons: [t3, t4],
       dangerMode: true,
       closeOnClickOutside: false,
     })
