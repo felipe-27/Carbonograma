@@ -114,7 +114,7 @@ body {
   padding: 32px 26px;
   box-sizing: border-box;
   justify-content: space-between;
-  gap: 60px;
+  gap: 30px;
   text-align: center;
   font-size: 22px;
   color: #fffbff;
@@ -136,11 +136,6 @@ body {
   justify-content: center;
 }
 
-.texto {
-  flex-direction: row;
-  padding: 24px;
-}
-
 .action {
   align-self: stretch;
   padding: 32px;
@@ -150,7 +145,7 @@ body {
   align-items: center;
 }
 
-
+/* texto */
 .negrito {
   font-size: 24px;
   font-weight: 600;
@@ -160,22 +155,37 @@ body {
 .missao-equipe {
   position: relative;
   letter-spacing: 0.5px;
+  flex-direction: row;
+  padding: 56px;
+  rotate: 3deg;
+
 }
 
 /* logo */
-.fsa {
-  position: relative;
-  flex-shrink: 0;
-  filter: drop-shadow(0 4px 8px #00000025);
-  width: 120px;
-  height: 120px;
-}
-
 .logo-icon {
   position: absolute;
   top: calc(50% - 60px);
   left: calc(50% - 60px);
   object-fit: cover;
   width: 120px;
-  height: 120px;
+  height: 120px;  
+  rotate: 3deg;
+  filter: drop-shadow(-8px 8px 5px rgba(0, 0, 0, 0.25))
+}
+
+/* fundos */
+
+.texto1, .texto2, .fsa{
+  margin: -20px -40px;
+  rotate: -3deg;
+  }
+
+.texto2{  
+  background: linear-gradient(#0458A3, #0D497E);
+}
+
+.fsa {  
+  width: calc(100% + 5rem);
+  height: 250px;
+  background: linear-gradient(180deg, #F9CB40 41.15%, #BF9A29 100%);  
 }
