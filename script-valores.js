@@ -90,23 +90,23 @@ function chamarEnergia() {
 }
 
 var selectedLanguage = localStorage.getItem("language");
-console.log(selectedLanguage);
+console.log(selectedLanguage)
 
-if (selectedLanguage = "pt") {
+if (selectedLanguage == "pt") {
   t1 = "Deseja sair?";
   t2 = "Ao fechar o formulário, os campos preenchidos NÃO serão salvos!";
   t3 = "Cancelar";
   t4 = "Sair";
 }
-if (selectedLanguage = "en") {
+if (selectedLanguage == "en") {
   t1 = "Do you want to exit?";
   t2 = "When closing this forms, the completed fields WILL NOT be saved!";
   t3 = "Cancel";
   t4 = "Exit";
 }
 
-
 function closeAlert() {
+
   swal({
       title: t1,
       text: t2,

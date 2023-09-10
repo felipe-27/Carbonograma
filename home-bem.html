@@ -13,63 +13,78 @@
 
 <body>
   <section class="home-bem">
-    <header class="title72">
-      <div class="title73" name="identificar" data-key="titulo">Boas vindas!</div>
-    </header>
-    <div class="content11">
-      <div class="carrossel2">
-        <div class="basic-dialog4">
-          <div class="text-content6">
-            <div class="title-description6">
-              <img class="title-description-inner" alt="" src="public/home/sobre-nos.png" />
-              <h1 class="title74" name="identificar" data-key="t1">Sobre nós</h1>
-              <label class="body30" name="identificar" data-key="t2">Acesse um resumo sobre os desenvolvedores e a sua instituição
-                de ensino</label>
+    <header class="header" name="identificar" data-key="titulo">Boas vindas!</header>
+
+    <div class="container">
+
+      <div class="content11">
+        <div class="carrossel2">
+          <div class="card" id="card1">
+            <div class="text-content6">
+              <div class="title-description6">
+                <img class="title-description-inner" alt="" src="public/home/sobre-nos.png" />
+                <h1 class="title74" name="identificar" data-key="t1">Sobre nós</h1>
+                <label class="body30" name="identificar" data-key="t2">Acesse um resumo sobre os desenvolvedores e a sua
+                  instituição
+                  de ensino</label>
+              </div>
+            </div>
+            <div class="actions20">
+              <div class="button40" id="buttonContainer1">
+                <div class="state-layer72">
+                  <div class="label-text38" name="identificar" data-key="t3">CONFIRA</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="actions20">
-            <div class="button40" id="buttonContainer1">
-              <div class="state-layer72">
-                <div class="label-text38" name="identificar" data-key="t3">CONFIRA</div>
+
+          <div class="card" id="card2">
+            <div class="text-content6">
+              <div class="title-description6">
+                <img class="foto-como-fazer-o-bem" alt="" src="public/home/como-fazer-bem.png" />
+                <h1 class="title74" name="identificar" data-key="t4">Como fazer o bem</h1>
+                <label class="body30" name="identificar" data-key="t5">Ainda tem dúvidas sobre como plantar uma árvore?
+                  Confira
+                  agora mesmo um pequeno manual</label>
+              </div>
+            </div>
+            <div class="actions20">
+              <div class="button40" id="bem">
+                <div class="state-layer72">
+                  <div class="label-text38" name="identificar" data-key="t3">CONFIRA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card3">
+            <div class="text-content5">
+              <div class="title-description6">
+                <img class="title-description-child" alt="" src="public/home/mostre-sua-acao.png" />
+                <h1 class="title74" name="identificar" data-key="t7">Mostre sua ação</h1>
+                <label class="body30" name="identificar" data-key="t8">Temos uma ótima alternativa para você que acabou
+                  de plantar
+                  sua primeira muda!</label>
+              </div>
+            </div>
+            <div class="actions20">
+              <div class="button39" id="mostreAcao">
+                <div class="state-layer72">
+                  <div class="label-text48" name="identificar" data-key="t3">CONFIRA</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="basic-dialog4">
-          <div class="text-content6">
-            <div class="title-description6">
-              <img class="foto-como-fazer-o-bem" alt="" src="public/home/como-fazer-bem.png" />
-              <h1 class="title74"name="identificar" data-key="t4">Como fazer o bem</h1>
-              <label class="body30" name="identificar" data-key="t5">Ainda tem dúvidas sobre como plantar uma árvore? Confira
-                agora mesmo um pequeno manual</label>
-            </div>
-          </div>
-          <div class="actions20">
-            <div class="button40" id="bem">
-              <div class="state-layer72">
-                <div class="label-text38" name="identificar" data-key="t3">CONFIRA</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="basic-dialog4">
-          <div class="text-content5">
-            <div class="title-description6">
-              <img class="title-description-child" alt="" src="public/home/mostre-sua-acao.png" />
-              <h1 class="title74"name="identificar" data-key="t7">Mostre sua ação</h1>
-              <label class="body30"name="identificar" data-key="t8">Temos uma ótima alternativa para você que acabou de plantar
-                sua primeira muda!</label>
-            </div>
-          </div>
-          <div class="actions20">
-            <div class="button39" id = "mostreAcao">
-              <div class="state-layer72">
-                <div class="label-text48"name="identificar" data-key="t3">CONFIRA</div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
+
+      <nav class="dots">
+        <a id="card1" class="dots-item" href="#card1"></a>
+        <a id="card2" class="dots-item active" href="#card2"></a>
+        <a id="card3" class="dots-item" href="#card3"></a>
+      </nav>
+
     </div>
 
     <div class="navigation-bar8">
@@ -103,52 +118,55 @@
       traduzir();
     });
 
+    //navigation dots
+    var cards = document.querySelectorAll(".card");
 
-    var buttonContainer1 = document.getElementById("buttonContainer1");
-    if (buttonContainer1) {
-      buttonContainer1.addEventListener("click", function (e) {
-        event.preventDefault();
-        document.body.classList.add('fade');
-          setTimeout(function () {
-        window.location.href = "./sobre-nos.html";
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+          //recupera o ID do cartão ativo:
+          var cardAtivo = entry.target.id
+
+          document.querySelectorAll('.dots a').forEach(function (a) {
+            if (cardAtivo == a.id) {
+              // Remover a classe ativa de qualquer elemento que a tenha
+              var currentlyActive = document.querySelector('.active');
+              if (currentlyActive) {
+                currentlyActive.classList.remove('active');
+              }
+              // Adicionar a classe ativa ao elemento especificado
+              a.classList.add('active');
+            }
+          });
+        };
       });
-      });
+    });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+
+
+    //funções para botões
+    function redirectToPage(pageUrl) {
+      return function () {
+        window.location.href = pageUrl;
+      };
     }
 
-    var buttonContainer1 = document.getElementById("mostreAcao");
-    if (buttonContainer1) {
-      buttonContainer1.addEventListener("click", function (e) {
-        window.location.href = "./mostre-sua-ao.html";
-      });
-    }    
-
-    var leftIcon = document.getElementById("bem");
-    if (leftIcon) {
-      leftIcon.addEventListener("click", function (e) {
-        window.location.href = "./bem.html";
-      });
+    function addClickListener(elementId, pageUrl) {
+      var element = document.getElementById(elementId);
+      if (element) {
+        element.addEventListener("click", redirectToPage(pageUrl));
+      }
     }
-
-    var rightIcon = document.getElementById("rightIcon");
-    if (rightIcon) {
-      rightIcon.addEventListener("click", function (e) {
-        window.location.href = "./home-acao.html";
-      });
-    }
-
-    var buildingBlocksSegment1 = document.getElementById("buildingBlocksSegment1");
-    if (buildingBlocksSegment1) {
-      buildingBlocksSegment1.addEventListener("click", function (e) {
-        window.location.href = "./home-calculo.html";
-      });
-    }
-
-    var buildingBlocksSegment2 = document.getElementById("buildingBlocksSegment2");
-    if (buildingBlocksSegment2) {
-      buildingBlocksSegment2.addEventListener("click", function (e) {
-        window.location.href = "./home-opcoes.html";
-      });
-    }
+    addClickListener("buttonContainer1", "./sobre-nos.html");
+    addClickListener("mostreAcao", "./mostre-sua-ao.html");
+    addClickListener("bem", "./bem.html");
+    addClickListener("rightIcon", "./home-acao.html");
+    addClickListener("buildingBlocksSegment1", "./home-calculo.html");
+    addClickListener("buildingBlocksSegment2", "./home-opcoes.html");
   </script>
 </body>
+
 </html>

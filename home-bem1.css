@@ -8,6 +8,24 @@ body {
   display: flex;
 }
 
+@media screen and (min-height: 741px) {
+
+  .foto-como-fazer-o-bem,
+  .title-description-child,
+  .title-description-inner {
+    height: 250px;
+  }
+}
+
+@media screen and (max-height: 740px) {
+
+  .foto-como-fazer-o-bem,
+  .title-description-child,
+  .title-description-inner {
+    height: 180px;
+  }
+}
+
 /* section de conteudo, dentro do html e body */
 .home-bem {
   margin: 0 auto;
@@ -20,26 +38,52 @@ body {
   line-height: normal;
 }
 
-.title73 {
-  position: relative;
-  font-weight: 600;
-  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
-    #fffbff;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  mix-blend-mode: normal;
-}
-
-.title72 {
-  width: 312px;
+.header {
+  /*   width: 312px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   text-align: center;
   font-size: 32px;
   font-family: Rubik;
+  position: relative;
+  font-weight: 600;
+  color: #E7EDE9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.dots {  
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+  /* Reset styles */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.dots-item{
+  /* Rounded border */
+  border-radius: 9999px;
+  height: 0.75rem;
+  width: 0.75rem;
+
+  /* Inactive dot */
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+}
+
+.active{
+  background-color: #d1d5db;
 }
 
 .body30,
@@ -58,14 +102,11 @@ body {
 }
 
 .body30 {
+  font-family: Source Sans Pro;
   font-size: 16px;
+  font-weight: 400;
   letter-spacing: 0.5px;
-  font-family: "Source Sans Pro";
-  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
-    #fffbff;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FFFBFF;
 }
 
 .title-description6 {
@@ -125,16 +166,15 @@ body {
   color: #513720;
 }
 
-
-.basic-dialog4,
 .foto-como-fazer-o-bem {
-  align-self: stretch;
-  overflow: hidden;
-  flex-shrink: 0;
-
+  position: relative;
+  border-radius: 16px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 80%;
 }
 
-.basic-dialog4 {
+.card {
   border-radius: 28px;
   background-color: #279d3e;
   box-shadow: 4px 8px 20px -5px rgba(0, 0, 0, 0.2);
@@ -145,8 +185,9 @@ body {
   justify-content: center;
   min-height: 418px;
   height: 100%;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   justify-content: space-around;
+  flex-shrink: 0;
 }
 
 .basic-dialog3 {
@@ -168,7 +209,6 @@ body {
   position: relative;
   border-radius: 16px;
   max-width: 100%;
-  height: 183px;
   object-fit: cover;
 }
 
@@ -176,7 +216,6 @@ body {
   position: relative;
   border-radius: 16px;
   max-width: 100%;
-  height: 183px;
   object-fit: cover;
 }
 
@@ -199,16 +238,16 @@ body {
   overflow-x: scroll;
   scroll-behavior: smooth;
   cursor: grab;
-  scroll-snap-type: x mandatory;  
+  scroll-snap-type: x mandatory;
 }
 
-.content11 {/* esconde os outros cartões */
-  max-width: 310px; /*o ta vendo esse cara aqui, ele delimita a area da div*/
+.content11 {
+  max-width: 310px;
   width: 100%;
   align-items: center;
   justify-content: center;
   overflow-x: auto;
-  scroll-snap-type: x;  
+  scroll-snap-type: x;
   display: flex;
   gap: 10px;
 }
@@ -251,7 +290,7 @@ body {
   overflow: hidden;
 }
 
-.building-blocks-segment25, 
+.building-blocks-segment25,
 .icon-container25 {
   display: flex;
   flex-direction: column;
@@ -305,6 +344,7 @@ body {
   color: #fffbff;
   font-family: Rubik;
 }
+
 .fade {
   opacity: 0;
   background: linear-gradient(168.55deg, #279d3e, #176727);
@@ -319,11 +359,13 @@ body {
 .fade-out {
   animation-name: fadeOut;
 }
+
 /*tentativa sem precisa escripitar*/
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -333,6 +375,7 @@ body {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
