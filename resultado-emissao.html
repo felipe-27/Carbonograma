@@ -20,7 +20,6 @@
         <div class="building-blocks6">
           <div class="container9">
             <div class="state-layer24">
-              <img class="iconscheck-24px2" alt="" src="public/iconscheck-24px.svg" />
               <div class="label-text18" name="identificar" data-key="b51">Emissão</div>
             </div>
           </div>
@@ -28,7 +27,7 @@
         <div class="building-blocks7" id="buildingBlocksContainer1">
           <div class="container10">
             <div class="state-layer25">
-              <div class="label-text18"name="identificar" data-key="b52">Árvores</div>
+              <div class="label-text18" name="identificar" data-key="b52">Árvores</div>
             </div>
           </div>
         </div>
@@ -45,7 +44,7 @@
 
       <div class="total-de-emisses">
         <div class="descricao7">
-          <p class="total-de-emisses1"name="identificar" data-key="b54">Total das suas emissões:</p>
+          <p class="total-de-emisses1" name="identificar" data-key="b54">Total das suas emissões:</p>
           <p class="kgco2-por-ano" name="identificar" data-key="b55">(tonCO2 por ano)</p>
         </div>
         <div class="ilustracao3">
@@ -56,8 +55,8 @@
       <div class="compare" name="identificar" data-key="b56">COMPARE</div>
       <div class="total-de-emisses">
         <div class="descricao7">
-          <p class="total-de-emisses1"name="identificar" data-key="b57">Média de emissões per capita no Brasil:</p>
-          <p class="kgco2-por-ano"name="identificar" data-key="b58">(tonCO2 por ano)</p>
+          <p class="total-de-emisses1" name="identificar" data-key="b57">Média de emissões per capita no Brasil:</p>
+          <p class="kgco2-por-ano" name="identificar" data-key="b58">(tonCO2 por ano)</p>
         </div>
         <div class="ilustracao3">
           <img class="cloud-icon" alt="" src="public/calculo/resultado/brasil-emissao.svg" />
@@ -70,7 +69,7 @@
     <div class="button-frame">
       <button class="button12" id="button">
         <div class="state-layer27">
-          <div class="label-text21"name="identificar" data-key="b59">       </div>
+          <div class="label-text21" name="identificar" data-key="b59"> </div>
         </div>
       </button>
     </div>
@@ -98,59 +97,36 @@
   </section>
 
   <script>
-     const currentPage = "calculo";
+    const currentPage = "calculo";
 
-var close = document.getElementById("close");
-if (close) {
-  close.addEventListener("click", function (e) {
-    closeAlert();
-  });
-} 
+    var close = document.getElementById("close");
+    if (close) {
+      close.addEventListener("click", function (e) {
+        closeAlert();
+      });
+    }
 
-document.addEventListener('DOMContentLoaded', function () {
-  traduzir();
-})
+    document.addEventListener('DOMContentLoaded', function () {
+      traduzir();
+    })
+
     var resultadoTotal = localStorage.getItem('resultadoEmissao')
     document.getElementById("total").innerHTML = resultadoTotal
 
-    var buildingBlocksContainer1 = document.getElementById(
-      "buildingBlocksContainer1"
-    );
-    if (buildingBlocksContainer1) {
-      buildingBlocksContainer1.addEventListener("click", function (e) {
-        window.location.href = "./resultado-arvore.html";
-      });
+    function addClickListenerToElementById(elementId, redirectUrl) {
+      var element = document.getElementById(elementId);
+      if (element) {
+        element.addEventListener("click", function (e) {
+          window.location.href = redirectUrl;
+        });
+      }
     }
+    addClickListenerToElementById("buildingBlocksContainer1", "./resultado-arvore.html");
+    addClickListenerToElementById("buildingBlocksContainer2", "./resultado-grafico.html");
+    addClickListenerToElementById("button", "./home-calculo.html");
+    addClickListenerToElementById("buildingBlocksSegment", "./home-bem.html");
+    addClickListenerToElementById("buildingBlocksSegment2", "./home-opcoes.html");
 
-    var buildingBlocksContainer2 = document.getElementById(
-      "buildingBlocksContainer2"
-    );
-    if (buildingBlocksContainer2) {
-      buildingBlocksContainer2.addEventListener("click", function (e) {
-        window.location.href = "./resultado-grafico.html";
-      });
-    }
-
-    var button = document.getElementById("button");
-    if (button) {
-      button.addEventListener("click", function (e) {
-        window.location.href = "./home-calculo.html";
-      });
-    }
-
-    var buildingBlocksSegment = document.getElementById("buildingBlocksSegment");
-    if (buildingBlocksSegment) {
-      buildingBlocksSegment.addEventListener("click", function (e) {
-        window.location.href = "./home-bem.html";
-      });
-    }
-
-    var buildingBlocksSegment2 = document.getElementById("buildingBlocksSegment2");
-    if (buildingBlocksSegment2) {
-      buildingBlocksSegment2.addEventListener("click", function (e) {
-        window.location.href = "./home-opcoes.html";
-      });
-    }
   </script>
 </body>
 

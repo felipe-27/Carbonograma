@@ -118,6 +118,14 @@
       traduzir();
     });
 
+    //redirecionamento para página de resultados
+    var categorias = localStorage.getItem('categorias')
+    if (categorias) {
+      listener("buildingBlocksSegment1", "./resultado-emissao.html");
+    } else {
+      listener("buildingBlocksSegment1", "./home-calculo.html");
+    }
+
     //navigation dots
     var cards = document.querySelectorAll(".card");
 
@@ -154,18 +162,17 @@
       };
     }
 
-    function addClickListener(elementId, pageUrl) {
+    function listener(elementId, pageUrl) {
       var element = document.getElementById(elementId);
       if (element) {
         element.addEventListener("click", redirectToPage(pageUrl));
       }
     }
-    addClickListener("buttonContainer1", "./sobre-nos.html");
-    addClickListener("mostreAcao", "./mostre-sua-ao.html");
-    addClickListener("bem", "./bem.html");
-    addClickListener("rightIcon", "./home-acao.html");
-    addClickListener("buildingBlocksSegment1", "./home-calculo.html");
-    addClickListener("buildingBlocksSegment2", "./home-opcoes.html");
+    listener("buttonContainer1", "./sobre-nos.html");
+    listener("mostreAcao", "./mostre-sua-ao.html");
+    listener("bem", "./bem.html");
+    listener("rightIcon", "./home-acao.html");
+    listener("buildingBlocksSegment2", "./home-opcoes.html");
   </script>
 </body>
 

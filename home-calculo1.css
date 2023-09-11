@@ -8,6 +8,36 @@ body {
   display: flex;
 }
 
+
+@media screen and (min-height: 741px) {
+  .home-calculo {
+    padding: 48px 24px;
+    gap: 32px;
+    font-size: 22px;
+  }
+  .manuel{
+    width: calc(100% - 20px);
+    margin: 0 auto;
+  }
+  .manuelBloco{
+    padding: 24px;
+  }
+}
+
+@media screen and (max-height: 740px) {
+  .home-calculo {
+    padding: 32px 24px;
+    gap: 24px;
+    font-size: 20px;
+  }
+  .manuel {
+    max-width: 200px;  
+    margin: 0 auto;    
+    height: auto;
+  }
+}
+
+    
 /* section de conteudo, dentro do html e body */
 .home-calculo {
   min-height: 100%;
@@ -39,7 +69,7 @@ body {
   align-self: stretch;
   position: relative;
   letter-spacing: 0.5px;
-  color:rgb(255 255 255 / 75%);
+  color: rgb(255 255 255 / 75%);
 }
 
 
@@ -49,13 +79,10 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 24px;
 }
 
 .manuel {
   display: block;
-  width: 100%;
-  height: auto;
 }
 
 
@@ -100,7 +127,7 @@ body {
 .content8 {
   flex: 1;
   padding: 0 16px;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 16px;
   min-height: 460px;
 }
@@ -184,11 +211,8 @@ body {
   background: linear-gradient(168.55deg, #279d3e, #176727);
   width: 100%;
   flex-direction: column;
-  padding: 32px 24px;
   align-items: center;
-  gap: 32px;
   text-align: center;
-  font-size: 22px;
   font-family: "Source Sans Pro";
 }
 

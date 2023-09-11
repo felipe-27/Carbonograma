@@ -9,6 +9,18 @@ body {
 /* section de conteudo, dentro do html e body */
 .sobre-equipe {
   min-height: 100%;
+  overflow: visible;
+  overflow-y: scroll;
+}
+.sobre-equipe ::-webkit-scrollbar{
+  background-color: black;
+  width: 200px;
+
+}
+.sobre-nos2  {
+  width: 5px;
+  background-color: black;
+  border: -10px;
 }
 
 body {
@@ -177,3 +189,13 @@ body {
   color: #fffbff;
   font-family: "Source Sans Pro";
 }
+
+ .rol::-webkit-scrollbar {
+  width: 30px;
+  background: linear-gradient(168.55deg, #279d3e, #176727);
+  ;
+}
+.rol::-webkit-scrollbar-thumb{
+    background-color: #f9cb40;
+    border-radius: 10px;
+ }

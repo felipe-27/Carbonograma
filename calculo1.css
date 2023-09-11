@@ -1,4 +1,4 @@
-/* Ajuste de altura */
+ /* Ajuste de altura */
 html{
   height: 100%;
 }
@@ -55,7 +55,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0 8px;
+  padding: 0 24px;
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
@@ -128,7 +128,7 @@ body {
   position: relative;
   background: linear-gradient(168.55deg, #279d3e, #176727);
   width: 100%;
-  padding: 32px 24px;
+  padding: 48px 24px;
   box-sizing: border-box;
   justify-content: flex-start;
   gap: 32px;

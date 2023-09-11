@@ -7,6 +7,16 @@ body {
   min-height: 100%;
   display: flex;
 }
+.Scroll ::-webkit-scrollbar {
+  width: 7px;
+}
+.Scroll ::-webkit-scrollbar-thumb {
+  background: #a30473;
+}
+.Scroll ::-webkit-scrollbar-track {
+  background: #513720;  
+  border-radius: 6px;      /* color of the tracking area */
+}
 
 /* section de conteudo, dentro do html e body */
 .sobre-nos {
@@ -16,7 +26,20 @@ body {
 body {
   margin: 0;
   line-height: normal;
+  
 }
+  .body ::-webkit-scrollbar {
+    width: 7px;
+  }
+  .body ::-webkit-scrollbar-thumb {
+    background: #a30473;
+  }
+  .body ::-webkit-scrollbar-track {
+    background: #513720;  
+    border-radius: 6px;
+}
+
+
 
 .vector-icon {
   position: absolute;

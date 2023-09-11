@@ -18,23 +18,6 @@
     <div class="title49" name="identificar" data-key="title">Opções</div>
 
     <div class="espacamento">
-      <div class="subtitulo" name="identificar" data-key="subtitle">Sobre o aplicativo</div>
-
-      <div class="copyright">
-        <label class="body16" name="identificar" data-key="aplicativo">
-          <span class="aplicarbono"> Carbonograma</span>
-          <span style="font-size: 16px;"> versão 3 (beta)</span>
-        </label>
-
-        <label class="body17" name="identificar" data-key="copyright">
-          <span>Copyright </span>
-          <span class="span">©</span>
-          <span> Centro Educacional da Fundação Salvador Arena</span>
-        </label>
-      </div>
-    </div>
-
-    <div class="espacamento">
       <div class="subtitulo" name="identificar" data-key="selecione"> Selecione um idioma </div>
       <div class="bandeiras">
         <div id="pt" class="espacamento">
@@ -47,6 +30,24 @@
         </div>
       </div>
     </div>
+
+    <div class="espacamento">
+      <div class="subtitulo" name="identificar" data-key="subtitle">Sobre o aplicativo</div>
+
+      <div class="copyright">
+        <label class="body16" name="identificar" data-key="aplicativo">
+          <span class="aplicarbono"> Carbonograma</span>
+          <span style="font-size: 16px;"> versão 5 (beta)</span>
+        </label>
+
+        <label class="body17" name="identificar" data-key="copyright">
+          <span>Copyright </span>
+          <span class="span">©</span>
+          <span> Centro Educacional da Fundação Salvador Arena</span>
+        </label>
+      </div>
+    </div>
+
     <div class="navigation-bar5">
       <div class="building-blocks-segment15" id="home">
         <div class="icon-container15">
@@ -81,10 +82,19 @@
 
       traduzir();
 
-      var buttons = [
+      //redirecionamento para página de resultados
+      var categorias = localStorage.getItem('categorias')
+      if (categorias) {
+        var buttons = [
+        {id: 'home', redirect: './home-bem.html'},
+        {id: 'calculo', redirect: './resultado-emissao.html'}
+      ];
+      } else {
+        var buttons = [
         {id: 'home', redirect: './home-bem.html'},
         {id: 'calculo', redirect: './home-calculo.html'}
       ];
+      }
 
       //fade out
       buttons.forEach(function (button) {
@@ -103,11 +113,16 @@
     });
 
     //Seleção de idiomas
-    var translation = [
-      {id: 'pt', language: 'pt'},
-      {id: 'en', language: 'en' }
+    var translation = [{
+        id: 'pt',
+        language: 'pt'
+      },
+      {
+        id: 'en',
+        language: 'en'
+      }
     ];
-    
+
     translation.forEach(function (button) {
       var element = document.getElementById(button.id);
       if (element) {

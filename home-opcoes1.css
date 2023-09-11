@@ -12,6 +12,38 @@ body {
   background: linear-gradient(168.55deg, #279d3e, #176727);
 }
 
+/* TELA MAIOR */
+@media screen and (min-height: 741px) {
+  .home-opcoes {
+    padding: 48px 24px ;      
+    gap: 80px;
+  }
+  .subtitulo {
+    font-size: 28px;
+  }
+  .copyright {
+    font-size: 20px;
+  }
+  img {
+    width: 6em;
+  }
+}
+
+/* TELA MENOR - S5 e SE */
+@media screen and (max-height: 740px) {
+  .subtitulo {
+    font-size: 24px;
+  }
+  .copyright {
+    font-size: 18px;
+  }
+  .home-opcoes {
+    padding: 48px 24px 200px;    
+    gap: 32px; 
+    justify-content: space-between;
+  }
+}
+
 .espacamento {
   display: flex;
   flex-direction: column;
@@ -43,7 +75,6 @@ body {
   position: relative;
   line-height: 32px;
   font-weight: 300;
-  font-size: 24px;
   color: #fffbfff6;
   font-family: Rubik;
 }
@@ -69,13 +100,13 @@ body {
   position: relative;
   letter-spacing: 0.5px;
   color: #fffbffcb;
-  }
+}
+
 .body17 {
   align-self: stretch;
   position: relative;
   letter-spacing: 0.5px;
   color: #fffbffcb;
-  font-size: 16px;
 }
 
 .span {
@@ -87,7 +118,6 @@ body {
   align-self: stretch;
   padding: 0 12px;
   gap: 12px;
-  font-size: 18px;
   font-family: "Source Sans Pro";
 }
 
@@ -178,7 +208,7 @@ body {
   position: absolute;
   width: calc(100% - 48px);
   right: 24px;
-  bottom: 32px;
+  bottom: 48px;
   left: 24px;
   border-radius: 71px;
   background-color: #176727;
@@ -201,9 +231,7 @@ body {
   width: 100%;
   min-height: 100%;
   flex-direction: column;
-  padding: 32px 24px;
   align-items: center;
-  gap: 32px;
   text-align: center;
   font-size: 20px;
   font-family: "Source Sans Pro";
@@ -219,31 +247,34 @@ body {
   opacity: 1;
   transition: opacity 0.25s ease;
 }
-.transição{
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+
+.transição {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 
 }
-    .slide {
-      width: 100%;
-      height: 100%;
-      position: realtive;
-      top: 0;
-      left: 0;
-      transition: transform 0.5s ease;
-      background-color: #f1f1f1; /* cor de fundo do slide */;
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: realtive;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease;
+  background-color: #f1f1f1;
+  /* cor de fundo do slide */
+  ;
 }
 
-  .slide.active {
-    transform: translateX(0); 
+.slide.active {
+  transform: translateX(0);
 }
-  
-  .slide.next {
-    transform: translateX(100%);
-  }
-  
-  .slide.previous {
-    transform: translateX(-100%);
-  }
 
+.slide.next {
+  transform: translateX(100%);
+}
+
+.slide.previous {
+  transform: translateX(-100%);
+}

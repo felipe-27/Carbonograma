@@ -10,19 +10,46 @@ body {
 
 @media screen and (min-height: 741px) {
 
+  .header, .title74 {
+    font-size: 32px;
+  }
+  .home-bem {
+    padding: 48px 24px;
+  }
+  /* Imagens */
   .foto-como-fazer-o-bem,
   .title-description-child,
   .title-description-inner {
     height: 250px;
   }
+  .card {
+    width: 312px;
+    min-height: 418px;
+    height: 100%;
+  }
+  .dots {
+    margin: 32px;
+  }  
 }
 
 @media screen and (max-height: 740px) {
-
+  .header, .title74 {
+    font-size: 28px;
+  }
+  .home-bem {
+    padding: 32px 24px;
+  }
   .foto-como-fazer-o-bem,
   .title-description-child,
   .title-description-inner {
-    height: 180px;
+    height: 160px;
+  }
+  .card {
+    margin: 0 20px 20px;
+    width: 275px;
+  }
+  .dots {
+    margin: 0px;
   }
 }
 
@@ -39,13 +66,7 @@ body {
 }
 
 .header {
-  /*   width: 312px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; */
   text-align: center;
-  font-size: 32px;
   font-family: Rubik;
   position: relative;
   font-weight: 600;
@@ -56,10 +77,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
 }
 
-.dots {  
+.dots {
   /* Center the content */
   align-items: center;
   display: flex;
@@ -68,10 +88,10 @@ body {
 
   /* Reset styles */
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
-.dots-item{
+
+.dots-item {
   /* Rounded border */
   border-radius: 9999px;
   height: 0.75rem;
@@ -82,8 +102,8 @@ body {
   border: 1px solid #d1d5db;
 }
 
-.active{
-  background-color: #d1d5db;
+.active {
+  background-color: #f9cb40;
 }
 
 .body30,
@@ -178,13 +198,10 @@ body {
   border-radius: 28px;
   background-color: #279d3e;
   box-shadow: 4px 8px 20px -5px rgba(0, 0, 0, 0.2);
-  width: 312px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 418px;
-  height: 100%;
   scroll-snap-align: center;
   justify-content: space-around;
   flex-shrink: 0;
@@ -208,7 +225,7 @@ body {
 .title-description-inner {
   position: relative;
   border-radius: 16px;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -336,13 +353,13 @@ body {
   width: 100%;
   overflow: hidden;
   flex-direction: column;
-  padding: 32px 24px;
   align-items: center;
   justify-content: space-between;
   text-align: left;
   font-size: 24px;
   color: #fffbff;
   font-family: Rubik;
+  gap: 24px;
 }
 
 .fade {

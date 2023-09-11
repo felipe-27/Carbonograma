@@ -226,6 +226,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+.dicas{  
+  background-color: #a3ff9c;
+}
+
 .button-container {
   padding: 0 10px;
   align-items: flex-start;
