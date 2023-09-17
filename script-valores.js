@@ -13,7 +13,7 @@ function validVar(valor) { //validar variável - se houver campos vazios, iguala
   return valor;
 }
 
-
+//funções para pegar os valores
 function chamarAlimentos() {
   var checkboxes = ['botoes', 'botoes1', 'botoes2', 'botoes3', 'botoes4', 'botoes5'];
 
@@ -89,6 +89,12 @@ function chamarEnergia() {
   localStorage.setItem("pessoasCasa", pessoasCasa);
 }
 
+function chamarResiduos() {
+  var lixoOrg = document.getElementById("lixoOrg").value;
+  localStorage.setItem("lixoOrg", lixoOrg);
+}
+
+//escolher idioma
 var selectedLanguage = localStorage.getItem("language");
 console.log(selectedLanguage)
 
@@ -105,6 +111,7 @@ if (selectedLanguage == "en") {
   t4 = "Exit";
 }
 
+//pop-up
 function closeAlert() {
 
   swal({

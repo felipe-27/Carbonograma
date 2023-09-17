@@ -111,9 +111,16 @@ window.addEventListener("load", function () {
 
         console.log("energia: " + (energia))
 
+        /* ------------------------residuos--------------------- */
+
+        var lixoOrg = localStorage.getItem('lixoOrg');
+        var residuos = ((lixoOrg/1000)*7.666*365) / 1000
+
+        console.log("residuos: " + (residuos))
+
         /* -------------------------RESULTADOS-------------------------- */
 
-        var gastoTotal = energia + voos + alimentos + emissaoVeiculo;
+        var gastoTotal = energia + voos + alimentos + emissaoVeiculo + residuos;
         var resultadoEmissao = +(gastoTotal.toFixed(2));
         localStorage.setItem('resultadoEmissao', resultadoEmissao);
 
@@ -122,7 +129,7 @@ window.addEventListener("load", function () {
 
         
         /* GRAFICO */
-        const categorias = ['energia', 'voos', 'emissaoVeiculo', 'alimentos'];
+        const categorias = ['energia', 'voos', 'emissaoVeiculo', 'alimentos', 'residuos'];
         const porcentagens = [];
 
         categorias.forEach(categoria => {

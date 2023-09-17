@@ -1,6 +1,6 @@
 /* porcentagem */
 var arrayCategorias = JSON.parse(localStorage.getItem('categorias'));
-var categorias = ["energy", "voos", "transporte", "comida"];
+var categorias = ["energy", "voos", "transporte", "comida", "residuos"];
 
 for (var i = 0; i < categorias.length; i++) {
   var grafCategoria = arrayCategorias[i];
@@ -16,10 +16,12 @@ var data = {
         backgroundColor: [
             '#ebe07c',
             '#60a9ff',
-            '#b27f47',
-            '#88c340'
+            '#BF905F',
+            '#88c340',
+            '#FF9F85'
         ],
         borderColor: [
+            '#51372080',
             '#51372080',
             '#51372080',
             '#51372080',
@@ -32,7 +34,8 @@ var data = {
         'Energia',
         'Voos',
         'Transporte',
-        'Alimentação'
+        'Alimentação',        
+        'Residuos'
     ]
 };
 

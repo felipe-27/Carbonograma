@@ -92,7 +92,7 @@ var translations = {
         Bem5: {
             titulo2: "Como fazer o bem",
             t27: "5º - Mantendo os cuidados",
-            t28: " Agora, para manter a sua muda crescendo de forma saudável, molhe-a periodicamente a fim de manter o solo sempre úmido, sem excessos.",
+            t28: "Agora, para manter a sua muda crescendo de forma saudável, molhe-a periodicamente a fim de manter o solo sempre úmido, sem excessos.",
             t29: "Caso sinta conveniente, faça adubações complementares ao longo do tempo.",
             n1: "Entendi",
             n2: "Anterior",
@@ -129,7 +129,6 @@ var translations = {
             b4: "Caso seja questionado sobre um produto ou serviço que você não tenha utilizado, deixe os campos em branco.",
             b5: "Começar",
             b6: "Voltar",
-            v1: "voos",
 
             //energia
             b7: "Energia",
@@ -179,6 +178,9 @@ var translations = {
             b43: "Leite",
             b44: "Ovos",
             b45: "Queijo",
+
+            //voos            
+            v1: "Voos",
             b46: " Por quantas horas você viajou de avião no último ano? ",
             b47: "Qual a quantidade de passageiros, em média, de cada voo?",
             b48: "*Caso não saiba, use 300",
@@ -192,20 +194,30 @@ var translations = {
             b55: "(tonCO2 por ano)",
             b56: "COMPARE",
             b57: "Média de emissões per capita no Brasil:",
-            b58: "(tonCO2 por ano)",            
-            bdicas:"Dicas para fazer o bem",
+            b58: "(tonCO2 por ano)",
+            bdicas: "Dicas para fazer o bem",
             b59: "CALCULAR NOVAMENTE",
             b60: "Energia doméstica",
             b61: "Transporte aéreo",
             b62: "Transporte terrestre",
             b63: "Alimentação",
             b64: "Árvores necessárias para compensação:",
-
+            b65: "Resíduos",
         },
+
+        residuos: {
+            v1: "Resíduos",
+            b47: "Quantos gramas de lixo orgânico você produz por dia?",
+            b48: "*Caso não saiba, use 400",
+            a1: "Próximo",
+            a2: "Anterior",
+            a3: "Finalizar",
+        },
+
     },
     en: {
         calculo: {
-            a1: "Next", //precisa conferir se fiz o comando certo em todos pq se não me engano tem uma pagina que deu merda 
+            a1: "Next",
             a2: "Previous",
             a3: "Finished",
             //calculo
@@ -278,14 +290,22 @@ var translations = {
             b56: "COMPARE",
             b57: "Average emissions per capita in Brazil:",
             b58: "(tonCO2 per year)",
-            bdicas:"Tips on Doing Good",
+            bdicas: "Tips on Doing Good",
             b59: "CALCULATE AGAIN",
             b60: "Domestic Energy",
             b61: "Air Transport",
             b62: "Land transportation",
             b63: "Alimentation",
             b64: "Trees needed for clearing:",
-
+            b65: "Waste",
+        },
+        residuos: {
+            v1: "Waste",
+            b47: "How many grams of organic waste do you generate per day?",
+            b48: "*If you don't know, use 400",
+            a1: "Next",
+            a2: "Previous",
+            a3: "Finished",
         },
 
         homeOptions: {

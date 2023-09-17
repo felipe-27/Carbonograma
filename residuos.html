@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./residuos.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="script-valores.js" defer></script>
+  <script src="traducao.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+  <section class="transporte-aereo">
+    <header class="exit">
+      <button class="close" id="close">
+        <img class="close-child" alt="" src="public/navigation/exit-button.svg" />
+      </button>
+    </header>
+
+    <div class="progress-bar">
+      <div class="voos">
+        <div class="dots">
+          <img class="fundo-icon" alt="" src="public/calculo/progress-bar/circle-done.svg" />
+          <img class="food-icon" alt="" src="public/calculo/progress-bar/food.svg" />
+        </div>
+        <div class="progresso">
+          <div class="linha"></div>
+        </div>
+        <div class="dots">
+          <img class="fundo-icon" alt="" src="public/calculo/progress-bar/circle-done.svg" />
+          <img class="food-icon" alt="" src="public/calculo/progress-bar/bus.svg" />
+        </div>
+        <div class="progresso">
+          <div class="linha"></div>
+        </div>
+        <div class="dots">
+          <img class="fundo-icon" alt="" src="public/calculo/progress-bar/circle-done.svg" />
+          <img class="food-icon" alt="" src="public/calculo/progress-bar/aviao.svg" />
+        </div>
+        <div class="progresso">
+          <div class="linha"></div>
+        </div>
+        <div class="dots">
+          <img class="fundo-icon" alt="" src="public/calculo/progress-bar/circle-done.svg" />
+          <img class="food-icon" alt="" src="public/calculo/progress-bar/energia.svg" />
+        </div>
+        <div class="progresso">
+          <div class="linha"></div>
+        </div>
+        <div class="dots2">
+          <img class="fundo-icon2" alt="" src="public/calculo/progress-bar/circle-active.svg " />
+          <img class="avio-icon" alt="" src="public/calculo/progress-bar/lixeira-ativo.svg" />
+          <div class="alimentao" name="identificar" data-key="v1">Resíduos</div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="viagem">
+        <div class="qual-a-quantidade-de-passageir-parent">
+          <div class="por-quantas-horas" name="identificar" data-key="b47">
+            Quantos gramas de lixo orgânico você produz por dia?
+          </div>
+          <div class="caso-no-saiba" name="identificar" data-key="b48">*Caso não saiba, use 400</div>
+        </div>
+        <input name="lixoOrg" class="caixa-de-texto" type="number" placeholder="..." id="lixoOrg"
+          oninput="chamarResiduos()" />
+      </div>
+    </div>
+
+    <div class="actions1">
+      <div class="button2" id="buttonContainer">
+        <div class="state-layer2">
+          <div class="label-text2" name="identificar" data-key="a2">Anterior</div>
+        </div>
+      </div>
+      <div class="button5" id="button">
+        <div class="state-layer2">
+          <div class="label-text5" name="identificar" data-key="a3">Finalizar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const currentPage = "residuos"
+    var close = document.getElementById("close");
+    if (close) {
+      close.addEventListener("click", function (e) {
+        closeAlert();
+      });
+    } 
+
+    document.addEventListener('DOMContentLoaded', function () {
+      traduzir();
+    })
+  
+    var close = document.getElementById("close");
+    if (close) {
+      close.addEventListener("click", function (e) {
+        closeAlert();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById("lixoOrg").value = localStorage.getItem("lixoOrg");
+    });
+
+    var buttonContainer = document.getElementById("buttonContainer");
+    if (buttonContainer) {
+      buttonContainer.addEventListener("click", function (e) {
+        window.location.href = "./energia.html";
+      });
+    }
+
+    var button = document.getElementById("button");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "./calculandoLoading.html";
+      });
+    }
+  </script>
+</body>
+
+</html>
