@@ -48,7 +48,13 @@
           <img class="fundo-icon7" alt="" src="public/calculo/progress-bar/circle-active.svg " />
           <img class="energia-icon" alt="" src="public/calculo/progress-bar/energia-ativo.svg" />
           <div class="alimentao1" name="identificar" data-key="b7">Energia</div>
+        </div> 
+        <div class="progresso3">
+          <div class="linha3"></div>
         </div>
+        <div class="inactive">
+          <img class="icon-inactive" alt="" src="public/calculo/progress-bar/circle-inactive.svg " />
+        </div>  
       </div>
     </div>
 
@@ -126,11 +132,12 @@
           <div class="label-text4" name="identificar" data-key="a2">Anterior</div>
         </div>
       </div>
-      <button class="button5" id="button">
+
+      <div class="button4" id="button">
         <div class="state-layer4">
-          <div class="label-text5" name="identificar" data-key="a3">Finalizar</div>
+          <div class="label-text4" name="identificar" data-key="a1">Próximo</div>
         </div>
-      </button>
+      </div>
     </div>
   </section>
 
@@ -163,7 +170,7 @@
     var button = document.getElementById("button");
     if (button) {
       button.addEventListener("click", function (e) {
-        window.location.href = "./calculandoLoading.html";
+        window.location.href = "./residuos.html";
       });
     }
   </script>
