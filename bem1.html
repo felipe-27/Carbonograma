@@ -11,15 +11,15 @@
 </head>
 
 <body>
-<div id="seta" class="animacao">
-<div class="setab"> 
-  <img class="b" alt="" src="public/navigation/seta-baixo.svg" /> </img>
-</div>
-</div>  
-  
+  <div id="seta" class="animacao">
+    <div class="setab">
+      <img class="b" alt="" src="public/navigation/seta-baixo.svg" /> </img>
+    </div>
+  </div>
+
 
   <section class="bem1">
-      <div class="title31" name="identificar" data-key="titulo2">Como fazer o bem</div>  
+    <div class="title31" name="identificar" data-key="titulo2">Como fazer o bem</div>
     <div class="texto7">
 
       <header class="title32">
@@ -28,14 +28,16 @@
       <div class="somos9">
         <div class="primeiramente-analise-tanto" name="identificar" data-key="t15">
           Em primeiro lugar, analise o terreno onde a árvore será plantada.
-          Lembre-se de que cada tipo de árvore tem requisitos diferentes em relação ao local de plantio. 
+          Lembre-se de que cada tipo de árvore tem requisitos diferentes em relação ao local de plantio.
         </div>
       </div>
       <div class="somos9">
         <div class="primeiramente-analise-tanto" name="identificar" data-key="t16">
-          Portanto, é provável que certas espécies prefiram áreas mais úmidas, enquanto outras se adaptem melhor a áreas mais secas.
-          Uma dica útil é observar a cor do solo onde a muda será plantada: 
-          se for mais escura, indica que é mais rica em nutrientes; por outro lado, se for mais clara, tem menos nutrientes.
+          Portanto, é provável que certas espécies prefiram áreas mais úmidas, enquanto outras se adaptem melhor a áreas
+          mais secas.
+          Uma dica útil é observar a cor do solo onde a muda será plantada:
+          se for mais escura, indica que é mais rica em nutrientes; por outro lado, se for mais clara, tem menos
+          nutrientes.
         </div>
       </div>
     </div>
@@ -69,9 +71,13 @@
       setTimeout(function () {
         var seta = document.getElementById("seta");
         seta.style.opacity = '0';
+        setTimeout(function () {
+          seta.style.zIndex = '0';
+        }, 500)
+        
       }, 5000);
 
-      
+
     });
 
 
