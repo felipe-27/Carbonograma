@@ -150,8 +150,10 @@ var translations = {
             //transporte-terrestre
             t1: "Transporte",
             b22: "Escolha seu veículo",
-            c3: "Carro", // esse dois deram pau é eu não faço a menor ideia 
+            c3: "Carro",
             c4: "Moto",
+            c5: "Van",
+            c6: "Ônibus",
             b23: "Por favor preencha este campo",
             b24: "Qual o porte do veículo?",
             b25: "Porte",
@@ -164,7 +166,8 @@ var translations = {
             b32: "Híbrido",
             b33: "Flex",
             b34: "GNV",
-            b35: "Em média, quantos km por dia você dirige?",
+            b35: "Em média, quantos km por dia você se desloca?",
+            bb35: "Em média, quantas horas por dia você se desloca? (em decimal)",
 
 
             //alimentacao
@@ -250,6 +253,8 @@ var translations = {
             b22: "Choose your vehicle",
             c3: "Car",
             c4: "Motorcycle",
+            c5: "Van",
+            c6: "Bus",
             b23: "Please fill in this field",
             b24: "What is the size of the vehicle?",
             b25: "Size",
@@ -262,7 +267,8 @@ var translations = {
             b32: "Hybrid",
             b33: "Flex",
             b34: "GNV",
-            b35: "How many km per day do you drive?",
+            b35: "How many km per day do you travel?",
+            bb35: "On average, how many hours a day do you commute? (in decimal)",
 
 
             //alimentacao

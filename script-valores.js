@@ -13,6 +13,7 @@ function validVar(valor) { //validar variável - se houver campos vazios, iguala
   return valor;
 }
 
+
 //funções para pegar os valores
 function chamarAlimentos() {
   var checkboxes = ['botoes', 'botoes1', 'botoes2', 'botoes3', 'botoes4', 'botoes5'];
@@ -31,12 +32,28 @@ function chamarAlimentos() {
 
 
 function verCombustivel() {
-  if (localStorage.getItem('veiculo') == 2) { //esconder combustível se for moto
-    document.getElementById("verCombustivel").style.display = "none";
-  } else {
+
+  var veiculoStorage = localStorage.getItem('veiculo')
+
+  if (veiculoStorage == 1) { //mostrar tudo se for carro
     document.getElementById("verCombustivel").style.display = "flex";
+    document.getElementById("verPorte").style.display = "flex";
+
+    document.getElementById("kmHoras").dataset.key = "b35"
   }
-  requestAnimationFrame(function () {});
+  if (veiculoStorage == 2) { //esconder combustível se for moto
+    document.getElementById("verCombustivel").style.display = "none";
+    document.getElementById("verPorte").style.display = "flex";
+    document.getElementById("kmHoras").dataset.key = "b35"
+  }
+  if (veiculoStorage == 3 || veiculoStorage == 4) { //esconder tudo
+    document.getElementById("verCombustivel").style.display = "none";
+    document.getElementById("verPorte").style.display = "none";
+    //mudar km para Horas
+    document.getElementById("kmHoras").dataset.key = "bb35";
+  }
+  traduzir();
+  requestAnimationFrame(function () {}); //recarregar página
 }
 
 function chamarVeiculos() {

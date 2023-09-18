@@ -33,10 +33,13 @@ window.addEventListener("load", function () {
 
         /* ------------------------transporte terrestre---------------------- */
 
-        var tipoVeiculo = localStorage.getItem('veiculo');
+        var tipoVeiculo = localStorage.getItem('veiculo');       
         var kmRodados = localStorage.getItem('kmRodados');
         var porte = localStorage.getItem('porte');
         var combustivel = tipoVeiculo == 2 ? 1 : parseInt(localStorage.getItem('combustivel'), 10);
+        //operador ternário
+        //se tipoVeiculo = 2, o combustível é igual a 1
+        //senão, combustível é o valor do localStorage
 
         const fatoresEmissao = {
             1: { // Carro
@@ -75,13 +78,26 @@ window.addEventListener("load", function () {
             }
         };
 
+        //verificar os números salvos, para utilizá-los no cálculo a seguir
         if (tipoVeiculo in fatoresEmissao &&
             porte in fatoresEmissao[tipoVeiculo] &&
             combustivel in fatoresEmissao[tipoVeiculo][porte]) {
+            //===== CARRO/MOTO =====
             emissaoVeiculo = (fatoresEmissao[tipoVeiculo][porte][combustivel] * kmRodados) * 365;
+
+        } else if (tipoVeiculo == 3) {
+            //===== VAN =====
+
+            emissaoVeiculo = (((0.168 * kmRodados * 35) * 200) / 15) / 1000;
+            // 200 = dias letivos;  15 = pessoas na van
+
+        } else if (tipoVeiculo == 4) {
+            //===== ONIBUS ======
+
+            emissaoVeiculo = (((0.10303768 * kmRodados * 19) * 230) / 50) / 1000;
+
         } else {
             emissaoVeiculo = 0;
-
         }
 
         console.log("emissaoVeiculo: " + emissaoVeiculo)
@@ -114,7 +130,7 @@ window.addEventListener("load", function () {
         /* ------------------------residuos--------------------- */
 
         var lixoOrg = localStorage.getItem('lixoOrg');
-        var residuos = ((lixoOrg/1000)*7.666*365) / 1000
+        var residuos = ((lixoOrg / 1000) * 7.666 * 365) / 1000
 
         console.log("residuos: " + (residuos))
 
@@ -127,14 +143,14 @@ window.addEventListener("load", function () {
         var arvores = Math.round(gastoTotal / 0.167);
         localStorage.setItem('arvores', arvores);
 
-        
+
         /* GRAFICO */
         const categorias = ['energia', 'voos', 'emissaoVeiculo', 'alimentos', 'residuos'];
         const porcentagens = [];
 
         categorias.forEach(categoria => {
             const value = eval(categoria);
-            const percent = Math.round((value / gastoTotal) * 100);            
+            const percent = Math.round((value / gastoTotal) * 100);
             porcentagens.push(percent);
         });
 
