@@ -11,9 +11,15 @@
 </head>
 
 <body>
+<div id="seta" class="animacao">
+<div class="setab"> 
+  <img class="b" alt="" src="public/navigation/seta-baixo.svg" /> </img>
+</div>
+</div>  
+  
 
   <section class="bem1">
-      <div class="title31" name="identificar" data-key="titulo2">Como fazer o bem</div>    
+      <div class="title31" name="identificar" data-key="titulo2">Como fazer o bem</div>  
     <div class="texto7">
 
       <header class="title32">
@@ -59,7 +65,16 @@
 
     document.addEventListener("DOMContentLoaded", function () {
       traduzir();
+
+      setTimeout(function () {
+        var seta = document.getElementById("seta");
+        seta.style.opacity = '0';
+      }, 5000);
+
+      
     });
+
+
     var button = document.getElementById("button");
     if (button) {
       button.addEventListener("click", function (e) {
