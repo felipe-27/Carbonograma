@@ -181,6 +181,9 @@ var translations = {
             b43: "Leite",
             b44: "Ovos",
             b45: "Queijo",
+            l1: "Lixo",
+            l2:"Pouco",
+            l3:"Muito",
 
             //voos            
             v1: "Voos",
@@ -285,6 +288,9 @@ var translations = {
             b46: " How many hours have you traveled by plane in the last year? ",
             b47: "What is the average number of passengers on each flight?",
             b48: "*If you don't know, use 300",
+            l1: "Trash",
+            l2:"not a lot",
+            l3:"So much",
 
             //resultados 
             b50: "Results", // esse eu coloquei em varias paginas talvez haja algum tipo de problema porém não achei nenhum en quanto eu fiz 
