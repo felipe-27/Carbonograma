@@ -27,6 +27,13 @@ function chamarAlimentos() {
   });
 
   localStorage.setItem('alimentosObjects', JSON.stringify(alimentosObjects));
+
+  /* lixo */
+  var checkbox = document.querySelector('input[name="botoes6"]:checked');
+  if (checkbox.checked) {
+    var lixo = checkbox.value;
+  }
+  localStorage.setItem('lixo', lixo);
 }
 
 

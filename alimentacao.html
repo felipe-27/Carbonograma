@@ -70,7 +70,7 @@
         <div class="forms">
           <div class="descricao">
             <div class="no-consumo" name="identificar" data-key="b38">Não consumo</div>
-            <div class="no-consumo"name="identificar" data-key="b39">Diariamente</div>
+            <div class="no-consumo" name="identificar" data-key="b39">Diariamente</div>
           </div>
           <div class="carnevermelha" id="carneVer" oninput="chamarAlimentos()">
             <input id="b-11" type="radio" name="botoes" value="0" checked>
@@ -99,7 +99,7 @@
 
         <div class="forms">
           <div class="descricao">
-            <div class="no-consumo"name="identificar" data-key="b38">Não consumo</div>
+            <div class="no-consumo" name="identificar" data-key="b38">Não consumo</div>
             <div class="no-consumo" name="identificar" data-key="b39">Diariamente</div>
           </div>
           <div class="frango" id="carneFra" oninput="chamarAlimentos()">
@@ -220,7 +220,7 @@
         <!-- Queijo -->
         <div class="head3">
           <div class="carne-vermelha" name="identificar" data-key="b45">Queijo</div>
-          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/queijo.svg"/>
+          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/queijo.svg" />
         </div>
 
         <div class="linha12">
@@ -248,6 +248,36 @@
           </div>
         </div>
       </div>
+      <div class="escolha-alimento">
+        <!-- lixo -->
+        <div class="head3">
+          <div class="carne-vermelha" name="identificar" data-key="l1">Lixo</div>
+          <img class="carne-vermelha-icon" alt="" src="public/calculo/alimentacao/lixo.png" />
+        </div>
+
+        <div class="linha12">
+          <div class="line-div"></div>
+        </div>
+
+
+        <div class="forms">
+          <div class="descricao">
+            <div class="no-consumo" name="identificar" data-key="l2">Pouco</div>
+            <div class="no-consumo" name="identificar" data-key="l3">Muito</div>
+          </div>
+          <div class="egg" id="ovo" oninput="chamarAlimentos()">
+            <aling-center>
+              <input id="l1" type="radio" name="botoes6" value="0" checked>
+              <label for="l1"> </label>
+              <input id="l2" type="radio" name="botoes6" value="1">
+              <label for="l2"> </label>
+              <input id="l3" type="radio" name="botoes6" value="3">
+              <label for="l3"> </label>
+            </aling-center>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
 
     <div class="actions3">
@@ -292,7 +322,6 @@
           //repetir esse código para cada "checkRadio" (cada alimento)
           var valorComparado = alimentosObjects[index];
           var botoesRadio = document.getElementsByName(name);
-          console.log(valorComparado);
 
           // Iterar sobre os botões de rádio
           for (var i = 0; i < botoesRadio.length; i++) {
@@ -305,6 +334,21 @@
           }
         });
       }
+
+      /* lixo */
+      var valorComparado = localStorage.getItem('lixo');
+      var botoesRadio = document.getElementsByName('botoes6')
+
+      // Iterar sobre os botões de rádio
+      for (var i = 0; i < botoesRadio.length; i++) {
+        // Comparar o valor do botão de rádio com a variável
+        if (parseInt(botoesRadio[i].value) == valorComparado) {
+          // Definir o botão de rádio como selecionado
+          botoesRadio[i].checked = true;
+          break; // Encerrar o loop, pois o botão foi encontrado
+        }
+      }
+
     });
 
     var button1 = document.getElementById("button1");

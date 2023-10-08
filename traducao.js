@@ -92,7 +92,7 @@ var translations = {
         Bem5: {
             titulo2: "Como fazer o bem",
             t27: "5º - Mantendo os cuidados",
-            t28: " Agora, para manter a sua muda crescendo de forma saudável, molhe-a periodicamente a fim de manter o solo sempre úmido, sem excessos.",
+            t28: "Agora, para manter a sua muda crescendo de forma saudável, molhe-a periodicamente a fim de manter o solo sempre úmido, sem excessos.",
             t29: "Caso sinta conveniente, faça adubações complementares ao longo do tempo.",
             n1: "Entendi",
             n2: "Anterior",
@@ -129,7 +129,6 @@ var translations = {
             b4: "Caso seja questionado sobre um produto ou serviço que você não tenha utilizado, deixe os campos em branco.",
             b5: "Começar",
             b6: "Voltar",
-            v1: "voos",
 
             //energia
             b7: "Energia",
@@ -151,8 +150,10 @@ var translations = {
             //transporte-terrestre
             t1: "Transporte",
             b22: "Escolha seu veículo",
-            c3: "Carro", // esse dois deram pau é eu não faço a menor ideia 
+            c3: "Carro",
             c4: "Moto",
+            c5: "Van",
+            c6: "Ônibus",
             b23: "Por favor preencha este campo",
             b24: "Qual o porte do veículo?",
             b25: "Porte",
@@ -165,7 +166,8 @@ var translations = {
             b32: "Híbrido",
             b33: "Flex",
             b34: "GNV",
-            b35: "Em média, quantos km por dia você dirige?",
+            b35: "Em média, quantos km por dia você se desloca?",
+            bb35: "Em média, quantas horas por dia você se desloca? (em decimal)",
 
 
             //alimentacao
@@ -179,6 +181,12 @@ var translations = {
             b43: "Leite",
             b44: "Ovos",
             b45: "Queijo",
+            l1: "Lixo",
+            l2:"Pouco",
+            l3:"Muito",
+
+            //voos            
+            v1: "Voos",
             b46: " Por quantas horas você viajou de avião no último ano? ",
             b47: "Qual a quantidade de passageiros, em média, de cada voo?",
             b48: "*Caso não saiba, use 300",
@@ -192,20 +200,30 @@ var translations = {
             b55: "(tonCO2 por ano)",
             b56: "COMPARE",
             b57: "Média de emissões per capita no Brasil:",
-            b58: "(tonCO2 por ano)",            
-            bdicas:"Dicas para fazer o bem",
+            b58: "(tonCO2 por ano)",
+            bdicas: "Dicas para fazer o bem",
             b59: "CALCULAR NOVAMENTE",
             b60: "Energia doméstica",
             b61: "Transporte aéreo",
             b62: "Transporte terrestre",
             b63: "Alimentação",
             b64: "Árvores necessárias para compensação:",
-
+            b65: "Resíduos",
         },
+
+        residuos: {
+            v1: "Resíduos",
+            b47: "Quantos gramas de lixo orgânico você produz por dia?",
+            b48: "*Caso não saiba, use 400",
+            a1: "Próximo",
+            a2: "Anterior",
+            a3: "Finalizar",
+        },
+
     },
     en: {
         calculo: {
-            a1: "Next", //precisa conferir se fiz o comando certo em todos pq se não me engano tem uma pagina que deu merda 
+            a1: "Next",
             a2: "Previous",
             a3: "Finished",
             //calculo
@@ -238,6 +256,8 @@ var translations = {
             b22: "Choose your vehicle",
             c3: "Car",
             c4: "Motorcycle",
+            c5: "Van",
+            c6: "Bus",
             b23: "Please fill in this field",
             b24: "What is the size of the vehicle?",
             b25: "Size",
@@ -250,7 +270,8 @@ var translations = {
             b32: "Hybrid",
             b33: "Flex",
             b34: "GNV",
-            b35: "How many km per day do you drive?",
+            b35: "How many km per day do you travel?",
+            bb35: "On average, how many hours a day do you commute? (in decimal)",
 
 
             //alimentacao
@@ -267,6 +288,9 @@ var translations = {
             b46: " How many hours have you traveled by plane in the last year? ",
             b47: "What is the average number of passengers on each flight?",
             b48: "*If you don't know, use 300",
+            l1: "Trash",
+            l2:"not a lot",
+            l3:"So much",
 
             //resultados 
             b50: "Results", // esse eu coloquei em varias paginas talvez haja algum tipo de problema porém não achei nenhum en quanto eu fiz 
@@ -278,14 +302,22 @@ var translations = {
             b56: "COMPARE",
             b57: "Average emissions per capita in Brazil:",
             b58: "(tonCO2 per year)",
-            bdicas:"Tips on Doing Good",
+            bdicas: "Tips on Doing Good",
             b59: "CALCULATE AGAIN",
             b60: "Domestic Energy",
             b61: "Air Transport",
             b62: "Land transportation",
             b63: "Alimentation",
             b64: "Trees needed for clearing:",
-
+            b65: "Waste",
+        },
+        residuos: {
+            v1: "Waste",
+            b47: "How many grams of organic waste do you generate per day?",
+            b48: "*If you don't know, use 400",
+            a1: "Next",
+            a2: "Previous",
+            a3: "Finished",
         },
 
         homeOptions: {
