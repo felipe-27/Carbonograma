@@ -28,6 +28,18 @@ window.addEventListener("load", function () {
             alimentos += fatorConversao * quantidade * 52;
         }
 
+        var lixo = localStorage.getItem('lixo');
+
+        if (lixo == 1) {
+            fatores = 0.364
+        } else if (lixo == 2) {
+            fatores = 0.495
+        } else if (lixo == 3) {
+            fatores = 0.626
+        }
+
+        alimentos += (lixo * 7.666 * 52) / 1000
+
         console.log("alimentos: " + alimentos)
 
 
@@ -120,14 +132,14 @@ window.addEventListener("load", function () {
         var arvores = Math.round(gastoTotal / 0.167);
         localStorage.setItem('arvores', arvores);
 
-        
+
         /* GRAFICO */
         const categorias = ['energia', 'voos', 'emissaoVeiculo', 'alimentos'];
         const porcentagens = [];
 
         categorias.forEach(categoria => {
             const value = eval(categoria);
-            const percent = Math.round((value / gastoTotal) * 100);            
+            const percent = Math.round((value / gastoTotal) * 100);
             porcentagens.push(percent);
         });
 

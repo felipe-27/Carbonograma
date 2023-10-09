@@ -33,6 +33,9 @@ function chamarAlimentos() {
   if (checkbox.checked) {
     var lixo = checkbox.value;
   }
+  if (lixo == 0) {
+    lixo = 1;
+  }
   localStorage.setItem('lixo', lixo);
 }
 
