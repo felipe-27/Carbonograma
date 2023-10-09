@@ -1,11 +1,13 @@
 /* Ajuste de altura */
-html{
+html {
   height: 100%;
 }
+
 body {
   min-height: 100%;
   display: flex;
 }
+
 /* section de conteudo, dentro do html e body */
 .bem5 {
   min-height: 100%;
@@ -15,21 +17,37 @@ body {
   margin: 0;
   line-height: normal;
 }
+
+.image {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(4px 8px 20px rgba(0, 0, 0, 0.2));
+
+}
+
 .title19,
 .title21 {
   position: relative;
-  color: #fffbff;
-  
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
+
 .title19 {
   align-self: stretch;
   line-height: 32px;
   font-weight: 500;
 }
+
 .title21 {
   flex: 1;
   font-weight: 600;
 }
+
 .title20 {
   align-self: stretch;
   display: flex;
@@ -40,11 +58,13 @@ body {
   font-size: 32px;
   font-family: Rubik;
 }
+
 .agora-para-manter {
   flex: 1;
   position: relative;
   letter-spacing: 0.5px;
 }
+
 .somos2,
 .texto3 {
   align-self: stretch;
@@ -53,6 +73,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+.somos2{
+flex-direction: column;
+gap: 24px;
+}
+
 .texto3 {
   flex: 1;
   flex-direction: column;
@@ -63,6 +88,7 @@ body {
   font-size: 22px;
   font-family: "Source Sans Pro";
 }
+
 .label-text23 {
   position: relative;
   font-size: 16px;
@@ -71,8 +97,13 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   font-family: Rubik;
-  color: #fffbff;
+  background: linear-gradient(rgba(33, 125, 51, 0.11), rgba(33, 125, 51, 0.11)),
+    #fffbff;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 .button14,
 .state-layer32 {
   display: flex;
@@ -80,10 +111,12 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+
 .state-layer32 {
   flex-direction: row;
   padding: 10px 12px;
 }
+
 .button14 {
   border: 0;
   padding: 0;
@@ -94,33 +127,55 @@ body {
   border-radius: 8px;
   flex-direction: column;
 }
+
 .dot3,
-.dot7 {
+.dot7,
+.dot4,
+.dot8 {
   position: relative;
   border-radius: 24px;
   height: 8px;
   flex-shrink: 0;
 }
-.dot3 {
+
+.dot3,
+.dot4 {
   background-color: #201b17;
   width: 8px;
   opacity: 0.3;
 }
-.dot7 {
+
+.dot4 {
+  width: 12px;
+}
+
+.dot7,
+.dot8 {
   background-color: #f9cb40;
   width: 12px;
 }
-.pagination-dots1 {
+
+.dot8 {
+  width: 20px;
+}
+
+.pagination-dots1,
+.pagination-dots2 {
   position: absolute;
   bottom: 32px;
   left: calc(50% - 38px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(4px 8px 20px rgba(0, 0, 0, 0.2));
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 8px;
 }
+
+.pagination-dots2 {
+  left: calc(50% - 20px);
+}
+
 .label-text24 {
   position: relative;
   font-size: 16px;
@@ -132,16 +187,19 @@ body {
   color: #513720;
   text-align: center;
 }
+
 .button15,
 .state-layer33 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .state-layer33 {
   flex-direction: row;
   padding: 10px 12px;
 }
+
 .button15 {
   cursor: pointer;
   border: 0;
@@ -153,16 +211,29 @@ body {
   border-radius: 8px;
   flex-direction: column;
 }
+.button16 {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  bottom: 16px;
+  right: 6px;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
 .actions5,
 .bem5 {
   position: relative;
 }
+
 .actions5 {
   align-self: stretch;
   height: 72px;
   flex-shrink: 0;
   overflow: hidden;
 }
+
 .bem5 {
   background: linear-gradient(168.55deg, #279d3e, #176727);
   width: 100%;

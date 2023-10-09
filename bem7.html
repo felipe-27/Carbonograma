@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./bem51.css" />
+  <script src="traducao.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;600&display=swap" />
+</head>
+
+<body>
+  <section class="bem5">
+    <div class="title19" name="identificar" data-key="titulo2">Como fazer o bem</div>
+    <div class="texto3">
+      <header class="title20">
+        <div class="title21" name="identificar" data-key="titulo4">Motor de busca Ecosia</div>
+      </header>
+      <div class="somos2">
+        <div class="agora-para-manter" name="identificar" data-key="t41">
+          Constantemente, milhares de pessoas estão pesquisando informações na internet. E se cada pesquisa feita
+          pudesse contribuir para o plantio de uma árvore?
+          Cristian Krool, após viajar pelo mundo e perceber o quão danoso poderia ser o desmatamento, teve a mesma
+          ideia. Com o apoio de sua startup alemã, ele criou o Ecosia: um motor de busca que, a cada pesquisa realizada,
+          doa uma árvore para a campanha "Plant a Billion Trees" - que significa "plante um bilhão de árvores".
+        </div>
+
+        <img class="image" alt="" src="public/mostre-sua-acao/ecosia_logo.svg"/>
+
+        <div class="agora-para-manter" name="identificar" data-key="t42">
+          Mas você pode estar se perguntando: como eles conseguem fazer isso? Na verdade, o principal objetivo do Ecosia
+          é destinar pelo menos 80% dos lucros gerados com anúncios publicitários para campanhas de reflorestamento,
+          como a "Plant a Billion Trees" mencionada anteriormente.
+        </div>
+
+        <div class="agora-para-manter" name="identificar" data-key="t43">
+          E por que você deveria usar o Ecosia? Aqui estão duas boas razões:
+        </div>
+        <div class="agora-para-manter" name="identificar" data-key="t44">
+          1 - Se você ainda tem dúvidas sobre como os desenvolvedores do Ecosia usam o dinheiro que ganham, pode ficar
+          tranquilo, pois o Ecosia é uma empresa que valoriza a transparência. Mensalmente, eles publicam um relatório
+          financeiro do mês, demonstrando a receita arrecadada e o valor investido em campanhas de reflorestamento.
+        </div>
+        <div class="agora-para-manter" name="identificar" data-key="t45">
+          2 - Uma das últimas preocupações do Ecosia é utilizar seus dados. Na verdade, o Ecosia protege suas
+          informações
+          e pesquisas por meio de uma conexão criptografada totalmente segura
+        </div>
+      </div>      
+      
+
+    </div>
+    <div class="actions5">
+      <button class="button14">
+        <div class="state-layer32" id="stateLayerContainer">
+          <div class="label-text23" name="identificar" data-key="n2">Anterior</div>
+        </div>
+      </button>
+      <div class="pagination-dots2">
+        <div class="dot4"></div>
+        <div class="dot8"></div>
+      </div>
+      <button class="button15" id="button1">
+        <div class="state-layer33">
+          <div class="label-text24" name="identificar" data-key="n3">Entendi</div>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <script>
+    const currentPage = "dicas";
+    document.addEventListener("DOMContentLoaded", function () {
+      traduzir();
+    });
+    var stateLayerContainer = document.getElementById("stateLayerContainer");
+    if (stateLayerContainer) {
+      stateLayerContainer.addEventListener("click", function (e) {
+        window.location.href = "./bem6.html";
+      });
+    }
+
+    var button1 = document.getElementById("button1");
+    if (button1) {
+      button1.addEventListener("click", function (e) {
+        window.location.href = "./home-bem.html";
+      });
+    }
+  </script>
+</body>
+
+</html>
