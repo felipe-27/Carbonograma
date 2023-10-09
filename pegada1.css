@@ -320,23 +320,22 @@ body {
   }
 }
 
+/* animações */
 .animate {
-  animation-duration: 0.75s;
-  animation-delay: 0.5s;
+  animation-duration: 0.25s;
   animation-name: animate-fade;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-fill-mode: backwards;
 }
 
-/* Glow In */
 .animate.glow {
   animation-name: animate-glow;
   animation-timing-function: ease;  
-  animation-duration: 0.5s;
+  animation-duration: 0.25s;
 }
 
 .animate.pop {
-  animation-duration: 0.5s;
+  animation-duration: 0.25s;
   animation-name: animate-pop;
   animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
 }

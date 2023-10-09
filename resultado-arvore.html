@@ -14,7 +14,7 @@
   <section class="resultado-arvore">
     <div class="title-group">
       <div class="title11">
-        <div class="title12" name="identificar" data-key="b50">Resultados</div>
+        <div class="title12 " name="identificar" data-key="b50">Resultados</div>
       </div>
       <div class="indicator1">
         <div class="building-blocks3" id="buildingBlocksContainer">
@@ -41,17 +41,18 @@
       </div>
     </div>
     <div class="arvores">
-      <div class="descricao6" name="identificar" data-key="b64">Árvores necessárias para compensação:</div>
+      <div class="descricao6 animate glow" name="identificar" data-key="b64">Árvores necessárias para compensação:</div>
       <div class="ilustracao2">
-        <img class="folha-icon" alt="" src="public/calculo/resultado/folha.svg" />
-        <div class="valor" id="tree">9999</div>
+        <img class="folha-icon animate pop delay" alt="" src="public/calculo/resultado/folha.svg" />
+        <div class="valor animate pop delay" id="tree">9999</div>
       </div>
     </div>
 
     <div class="button-container">
       <button class="button11 dicas" id="dicas-button">
         <div class="state-layer20">
-          <div class="label-text17" name="identificar" data-key="bdicas">Dicas para fazer o bem</div>
+          <div class="label-text17" name="identificar" data-key="bdicas">Dicas para fazer o bem
+          </div>
         </div>
       </button>
     </div>
@@ -62,7 +63,7 @@
           <div class="label-text17" name="identificar" data-key="b59">CALCULAR NOVAMENTE</div>
         </div>
       </button>
-    </div>    
+    </div>
 
     <div class="navigation-bar1">
       <button class="building-blocks-segment3" id="buildingBlocksSegment">
@@ -88,6 +89,9 @@
   </section>
 
   <script>
+    document.getAnimations().forEach((animation) => {
+      console.log(animation)
+    });
     const currentPage = "calculo";
 
     var close = document.getElementById("close");
@@ -114,11 +118,11 @@
     }
 
     addClickListenerToElement("buildingBlocksContainer", "./resultado-emissao.html");
-    addClickListenerToElement("buildingBlocksContainer2", "./resultado-grafico.html");   
+    addClickListenerToElement("buildingBlocksContainer2", "./resultado-grafico.html");
     addClickListenerToElement("dicas-button", "./bem.html");
     addClickListenerToElement("button", "./home-calculo.html");
     addClickListenerToElement("buildingBlocksSegment", "./home-bem.html");
-    addClickListenerToElement("buildingBlocksSegment2", "./home-opcoes.html"); 
+    addClickListenerToElement("buildingBlocksSegment2", "./home-opcoes.html");
   </script>
 </body>
 
