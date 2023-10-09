@@ -148,3 +148,30 @@ body {
   color: #fffbff;
   font-family: Rubik;
 }
+.ind {
+  position: absolute;
+  animation-name: bounce ;
+  animation-timing-function: ease;
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  background-position-x: right;
+  margin-top: 100px;
+  margin-left:90px ;
+  
+  }
+  .indicador{
+    animation-name: bounce ;
+    animation-timing-function: ease;
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
