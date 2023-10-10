@@ -229,7 +229,6 @@ body {
 
 .caixa-de-texto,
 .viagem {
-  align-self: stretch;
   display: flex;
   justify-content: flex-start;
 }
@@ -246,6 +245,8 @@ body {
   padding: 16px 24px;
   align-items: center;
   opacity: 0.95;
+  align-self: center;
+  width: calc(100% - 48px);
 }
 
 .viagem {
