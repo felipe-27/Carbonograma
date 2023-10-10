@@ -13,6 +13,18 @@ function validVar(valor) { //validar variável - se houver campos vazios, iguala
   return valor;
 }
 
+function tempoParaDecimal(tempo) {
+  // Divide a entrada nas partes de horas e minutos
+  const [horas, minutos] = tempo.split(':').map(Number);
+
+  // Converte os minutos para fração de horas (dividindo por 60)
+  const minutosEmHoras = minutos / 60;
+
+  // Soma as horas e a fração de horas
+  const tempoDecimal = horas + minutosEmHoras;
+
+  return tempoDecimal;
+}
 
 function chamarAlimentos() {
   var checkboxes = ['botoes', 'botoes1', 'botoes2', 'botoes3', 'botoes4', 'botoes5'];
@@ -39,13 +51,29 @@ function chamarAlimentos() {
   localStorage.setItem('lixo', lixo);
 }
 
-
 function verCombustivel() {
-  if (localStorage.getItem('veiculo') == 2) { //esconder combustível se for moto
-    document.getElementById("verCombustivel").style.display = "none";
-  } else {
+  var veiculoStorage = localStorage.getItem('veiculo')
+
+  if (veiculoStorage == 1) { //mostrar tudo se for carro
     document.getElementById("verCombustivel").style.display = "flex";
+    document.getElementById("verPorte").style.display = "flex";
+    document.getElementById("kmHoras").dataset.key = "b35"
+    document.getElementById("kmRodados").type = "number";
   }
+  if (veiculoStorage == 2) { //esconder combustível se for moto
+    document.getElementById("verCombustivel").style.display = "none";
+    document.getElementById("verPorte").style.display = "flex";
+    document.getElementById("kmHoras").dataset.key = "b35"
+    document.getElementById("kmRodados").type = "number";
+  }
+  if (veiculoStorage == 3 || veiculoStorage == 4) { //esconder tudo
+    document.getElementById("verCombustivel").style.display = "none";
+    document.getElementById("verPorte").style.display = "none";
+    //mudar km para Horas
+    document.getElementById("kmHoras").dataset.key = "bb35";
+    document.getElementById("kmRodados").type = "time";
+  }
+  traduzir();
   requestAnimationFrame(function () {});
 }
 
@@ -54,9 +82,15 @@ function chamarVeiculos() {
   var veiculo = document.getElementById("idVeiculo").value;
   var porte = document.getElementById("idPorte").value;
   var combustivel = document.getElementById("idCombustivel").value;
-  var kmRodados = document.getElementById("kmRodados").value;
-  kmRodados = validVar(kmRodados); //se campo for vazio, variavel = 0
+  var kmRodados = document.getElementById("kmRodados").value;  
+  var tipoInput = document.getElementById("kmRodados").type;
 
+  if (tipoInput == "time") {
+    kmRodados = tempoParaDecimal(kmRodados); //converter hora para decimal
+  } else if (tipoInput == "number") {    
+    kmRodados = validVar(kmRodados); //se campo for vazio, variavel = 0
+  }
+  
   localStorage.setItem("veiculo", veiculo);
   localStorage.setItem("porte", porte);
   localStorage.setItem("combustivel", combustivel);
@@ -70,6 +104,7 @@ function chamarVoos() {
   var horasAviao = document.getElementById("horasAviao").value;
   var qntdPessoas = document.getElementById("qntdPessoas").value;
 
+  horasAviao = tempoParaDecimal(horasAviao)
   localStorage.setItem("horasAviao", horasAviao);
 
   if (qntdPessoas == 0) {

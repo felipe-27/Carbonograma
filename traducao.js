@@ -199,7 +199,7 @@ var translations = {
             b33: "Flex (álcool/gasolina)",
             b34: "GNV",
             b35: "Em média, quantos km por dia você se desloca?",
-            bb35: "Em média, quantas horas por dia você se desloca? (em decimal)",
+            bb35: "Em média, quantas horas por dia você se desloca?",
 
 
             //alimentacao
@@ -303,7 +303,7 @@ var translations = {
             b33: "Flex (alcohol/gas)",
             b34: "GNV",
             b35: "How many km per day do you travel?",
-            bb35: "On average, how many hours a day do you commute? (in decimal)",
+            bb35: "On average, how many hours a day do you commute?",
 
 
             //alimentacao

@@ -91,6 +91,15 @@ window.addEventListener("load", function () {
             porte in fatoresEmissao[tipoVeiculo] &&
             combustivel in fatoresEmissao[tipoVeiculo][porte]) {
             emissaoVeiculo = (fatoresEmissao[tipoVeiculo][porte][combustivel] * kmRodados) * 365;
+        } else if (tipoVeiculo == 3) {
+            //===== VAN =====
+            emissaoVeiculo = (((0.168 * kmRodados * 35) * 200) / 15) / 1000;
+            // 200 = dias letivos;  15 = pessoas na van
+
+        } else if (tipoVeiculo == 4) {
+            //===== ONIBUS ======
+            emissaoVeiculo = (((0.10303768 * kmRodados * 19) * 230) / 50) / 1000; 
+        
         } else {
             emissaoVeiculo = 0;
 
